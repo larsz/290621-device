@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Eugen Lobicov](https://up.htmlacademy.ru/htmlcss/23/user/290621).
-* Наставник: `Неизвестно`.
+* Наставник: [Денис Быков](https://htmlacademy.ru/profile/id66426).
 
 ---
 
