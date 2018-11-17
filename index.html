@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>Девайс</title>
+</head>
 
-  </body>
+<body>
+  <header class="main-header">
+    <nav class="main-nav">
+      <span class="main-logo">
+        <a class="main-logo-url">Device</a>
+      </span>
+      <ul class="site-navigation">
+        <li><a href="catalog.html">Каталог товаров</a>
+          <ul>
+            <li>
+              <a href="#">Виртуальная реальность</a><br>
+              <a href="#">Моноподы для селфи</a><br>
+              <a href="#">Экшн-камеры</a>
+            </li>
+            <li>
+              <a href="#">Фитнес-браслеты</a><br>
+              <a href="#">Умные часы</a>
+            </li>
+            <li><a href="#">Квадрокоптеры</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <div class="search">
+        <!-- тут будет форма поиска -->
+      </div>
+      <ul class="user-nav">
+        <li class="login">Войти</li>
+      </ul>
+      <span class="compare">Сравнить</span>
+      <span class="cart">Корзина</span>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
+    <section class="about-us">
+      <h2>О нас</h2>
+      <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+        компаниями:</p>
+
+      <ul>
+        <li><strong>Деловые линии</strong></li>
+        <li><strong>Автотрейдинг</strong></li>
+        <li><strong>ЖелДорЭкспедиция</strong></li>
+      </ul>
+
+      <a href="about.html" class="btn">Подробнее о нас</a>
+    </section>
+
+    <section class="contacts">
+      <h2>Контакты</h2>
+      <p>Вы можете забрать товар сами, заехав к нам в офис. Заодно, вы сможете проверить работоспособность покупки.</p>
+
+      <img src="img/map.jpg" width="560" height="225" alt="карта проезда">
+      <button class="btn">Напишите нам</button>
+    </section>
+  </main>
+  <footer class="main-footer">
+    <p class="footer-contacts">
+      <span class="main-logo">
+        <a class="main-logo-url">Device</a>
+      </span>
+      г. Москва, ул. Строителей, 15
+    </p>
+    <ul class="footer-nav">
+      <li><a href="#">Доставка</a></li>
+      <li><a href="#">Гарантия</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+    <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
+    <div class="footer-social">
+      <ul>
+        <li><a class="social-button" href="#">Вконтакте</a></li>
+        <li><a class="social-button" href="#">Фейсбук</a></li>
+        <li><a class="social-button" href="#">Инстаграм</a></li>
+      </ul>
+    </div>
+    <p class="footer-copyright">
+      <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
+    </p>
+    <ul class="user-nav">
+      <li class="login">Войти</li>
+    </ul>
+    <span class="compare">Сравнить</span>
+    <span class="cart">Корзина</span>
+  </footer>
+
+  <section class="modal modal-feedback-form">
+    <!-- Здесь будет форма -->
+    <span class="modal-close">x</span>
+  </section>
+
+  <section class="modal modal-map">
+    <h2 class="visually-hidden">Как до нас добраться</h2>
+    <span class="modal-close">x</span>
+  </section>
+
+</body>
+
 </html>
