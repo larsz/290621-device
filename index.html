@@ -8,14 +8,14 @@
 
 <body>
   <header class="main-header">
-    <nav class="main-nav">
+    <nav class="main-navigation">
       <span class="main-logo">
-        <a class="main-logo-url" href="index.html">Device</a>
+        <a class="main-logo-url">Device</a>
       </span>
       <ul class="site-navigation">
         <li class="site-navigation-item">
           <a href="catalog.html">Каталог товаров</a>
-          <ul class="sub-nav">
+          <ul class="sub-navigation">
             <li class="site-navigation-item"><a href="#">Виртуальная реальность</a></li>
             <li class="site-navigation-item"><a href="#">Моноподы для селфи</a></li>
             <li class="site-navigation-item"><a href="#">Экшн-камеры</a></li>
@@ -28,11 +28,11 @@
         <li class="site-navigation-item"><a href="#">Гарантия</a></li>
         <li class="site-navigation-item"><a href="#">Контакты</a></li>
       </ul>
-      <div class="secondary-nav">
+      <div class="secondary-navigation">
         <div class="search">
           <!-- тут будет форма поиска -->
         </div>
-        <ul class="user-nav">
+        <ul class="user-navigation">
           <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
           <li><a class="logout" href="#">Выйти</a></li>
         </ul>
@@ -43,16 +43,110 @@
   </header>
   <main class="container">
     <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
+    <section class="bestsellers">
+      <h2 class="visually-hidden">Хиты продаж</h2>
+      <ul class="slider">
+        <li class="slide">
+          <div class="slide-image">
+            <img src="http://placehold.it/560x560" width="560" height="560" alt="Любительская селфи-палка">
+          </div>
+          <div class="slide-description">
+            <b class="slide-title">Делай селфи, как Бен Стиллер!</b>
+            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
+              всего 5 килограмм.</p>
+            <a class="btn" href="product.html">Подробнее</a>
+
+            <table class="featured-product-params">
+              <thead>
+                <tr>
+                  <th>Длина палки</th>
+                  <th>Вес палки</th>
+                  <th>Материал</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8,5 м</td>
+                  <td>5 кг</td>
+                  <td>Карбон</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+
+        <li class="slide">
+          <div class="slide-image">
+            <img src="http://placehold.it/560x560" width="560" height="560" alt="Фитнес-браслет">
+          </div>
+          <div class="slide-description">
+            <b class="slide-title">Худеем правильно!</b>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="btn" href="product.html">Подробнее</a>
+
+            <table class="featured-product-params">
+              <thead>
+                <tr>
+                  <th>Без подзарядки</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>48 часов</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+
+        <li class="slide">
+          <div class="slide-image">
+            <img src="http://placehold.it/560x560" width="560" height="560" alt="Квадрокоптер">
+          </div>
+          <div class="slide-description">
+            <b class="slide-title">Порхает как бабочка, жалит как пчела!</b>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <a class="btn" href="product.html">Подробнее</a>
+
+            <table class="featured-product-params">
+              <thead>
+                <tr>
+                  <th>Дальность полета</th>
+                  <th>Радиус поражения</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>800 м</td>
+                  <td>50 м</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </li>
+      </ul>
+      <ul class="slider-navigation">
+        <li class="slider-navigation-item slider-navigation-item--active">
+          <button>1</button>
+        </li>
+        <li class="slider-navigation-item">
+          <button>2</button>
+        </li>
+        <li class="slider-navigation-item">
+          <button>3</button>
+        </li>
+      </ul>
+    </section>
+
     <section class="about-us">
       <h2>О нас</h2>
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
-        компаниями:</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 
       <ul>
-        <li><strong>Деловые линии</strong></li>
-        <li><strong>Автотрейдинг</strong></li>
-        <li><strong>ЖелДорЭкспедиция</strong></li>
+        <li><b>Деловые линии</b></li>
+        <li><b>Автотрейдинг</b></li>
+        <li><b>ЖелДорЭкспедиция</b></li>
       </ul>
 
       <a href="about.html" class="btn">Подробнее о нас</a>
@@ -66,6 +160,7 @@
       <button class="btn">Напишите нам</button>
     </section>
   </main>
+
   <footer class="main-footer">
     <p class="footer-contacts">
       <span class="main-logo">
@@ -74,23 +169,23 @@
       г. Москва, ул. Строителей, 15
     </p>
     <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
-    <ul class="footer-nav">
+    <ul class="footer-navigation">
       <li><a href="#">Доставка</a></li>
       <li><a href="#">Гарантия</a></li>
       <li><a href="#">Контакты</a></li>
     </ul>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" href="#">Вконтакте</a></li>
-        <li><a class="social-button" href="#">Фейсбук</a></li>
-        <li><a class="social-button" href="#">Инстаграм</a></li>
+        <li><a class="social-btn social-btn--vk" href="https://vk.com/">Вконтакте</a></li>
+        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/">Фейсбук</a></li>
+        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/">Инстаграм</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
       <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
     </p>
-    <div class="secondary-nav">
-      <ul class="user-nav">
+    <div class="secondary-navigation">
+      <ul class="user-navigation">
         <li class="login">Войти</li>
       </ul>
       <a class="compare">Сравнить</a>
