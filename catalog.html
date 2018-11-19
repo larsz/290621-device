@@ -13,40 +13,39 @@
         <a class="main-logo-url" href="index.html">Device</a>
       </span>
       <ul class="site-navigation">
-        <li><a href="catalog.html">Каталог товаров</a>
-          <ul>
-            <li>
-              <a href="#">Виртуальная реальность</a><br>
-              <a href="#">Моноподы для селфи</a><br>
-              <a href="#">Экшн-камеры</a>
-            </li>
-            <li>
-              <a href="#">Фитнес-браслеты</a><br>
-              <a href="#">Умные часы</a>
-            </li>
-            <li><a href="#">Квадрокоптеры</a></li>
+        <li class="site-navigation-item">
+          <a>Каталог товаров</a>
+          <ul class="sub-nav">
+            <li class="site-navigation-item"><a href="#">Виртуальная реальность</a></li>
+            <li class="site-navigation-item"><a href="#">Моноподы для селфи</a></li>
+            <li class="site-navigation-item"><a href="#">Экшн-камеры</a></li>
+            <li class="site-navigation-item"><a href="#">Фитнес-браслеты</a></li>
+            <li class="site-navigation-item"><a href="#">Умные часы</a></li>
+            <li class="site-navigation-item"><a href="#">Квадрокоптеры</a></li>
           </ul>
         </li>
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
+        <li class="site-navigation-item"><a href="#">Доставка</a></li>
+        <li class="site-navigation-item"><a href="#">Гарантия</a></li>
+        <li class="site-navigation-item"><a href="#">Контакты</a></li>
       </ul>
-      <div class="search">
-        <!-- тут будет форма поиска -->
+      <div class="secondary-nav">
+        <div class="search">
+          <!-- тут будет форма поиска -->
+        </div>
+        <ul class="user-nav">
+          <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
+          <li><a class="logout" href="#">Выйти</a></li>
+        </ul>
+        <a class="compare">Сравнить</a>
+        <a class="cart">Корзина</a>
       </div>
-      <ul class="user-nav">
-        <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
-        <li class="logout">Выйти</li>
-      </ul>
-      <span class="compare">Сравнить</span>
-      <span class="cart">Корзина</span>
     </nav>
   </header>
   <main class="container">
     <h1 class="page-title">Моноподы для селфи</h1>
     <ul class="breadcrumbs">
       <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog.html">Каталог товаров</a></li>
+      <li><a>Каталог товаров</a></li>
       <li class="breadcrumbs-current-item">Моноподы для селфи</li>
     </ul>
 
@@ -193,12 +192,14 @@
     <p class="footer-copyright">
       <a class="button" href="https://htmlacademy.ru">HTML Academy</a>
     </p>
-    <ul class="user-nav">
-      <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
-      <li class="logout">Выйти</li>
-    </ul>
-    <span class="compare">Сравнить</span>
-    <span class="cart">Корзина</span>
+    <div class="secondary-nav">
+      <ul class="user-nav">
+        <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
+        <li><a class="logout" href="#">Выйти</a></li>
+      </ul>
+      <a class="compare">Сравнить</a>
+      <a class="cart">Корзина</a>
+    </div>
   </footer>
 
   <section class="modal modal-feedback-form">
@@ -212,4 +213,5 @@
   </section>
 
 </body>
+
 </html>
