@@ -14,7 +14,7 @@
     <nav class="main-navigation">
       <ul class="site-navigation" aria-label="Основное меню" role="menubar">
         <li class="site-navigation-item">
-          <a href="catalog.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
+          <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
           <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
             <li class="site-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
             <li class="site-navigation-item"><a href="#" role="menuitem">Моноподы для селфи</a></li>
@@ -46,9 +46,9 @@
   </header>
   <main class="container">
     <h1 class="page-title">Моноподы для селфи</h1>
-    <ul class="breadcrumbs" aria-label="Хлебные крошки">
-      <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-      <li class="breadcrumb-item"><a href="#">Каталог товаров</a></li>
+    <ul class="breadcrumbs" aria-label="Хлебные крошки" role="menubar">
+      <li class="breadcrumb-item"><a href="index.html" role="menuitem">Главная</a></li>
+      <li class="breadcrumb-item"><a href="all-products.html" role="menuitem">Каталог товаров</a></li>
       <li class="breadcrumb-item breadcrumb-item--current" aria-current="page"><span class="visually-hidden">Текущий
           пункт:</span>Моноподы для селфи</li>
     </ul>
@@ -109,25 +109,25 @@
       <h2 class="visually-hidden">Список моноподов для селфи</h2>
       <div class="sorting-controls">
         <b class="sorting-title">Сортировка:</b>
-        <ul class="sorting-params">
+        <ul class="sorting-params" aria-label="Сортировка списка товаров по критериям" role="menubar">
           <li class="sorting-param sorting-param--current" aria-selected="true">
             <span class="visually-hidden">Текущий пункт:</span>
-            <a href="#">По цене</a>
+            <a href="#" role="menuitem">По цене</a>
           </li>
           <li class="sorting-param">
-            <a href="#">По типу</a>
+            <a href="#" role="menuitem">По типу</a>
           </li>
           <li class="sorting-param">
-            <a href="#">По популярности</a>
+            <a href="#" role="menuitem">По популярности</a>
           </li>
         </ul>
-        <ul class="order-params">
+        <ul class="order-params" aria-label="Сортировка списка товаров по порядку" role="menubar">
           <li class="order-param order-param--current" aria-selected="true">
             <span class="visually-hidden">Текущий пункт:</span>
-            <a href="#">По возрастанию</a>
+            <a href="#" role="menuitem">По возрастанию</a>
           </li>
           <li class="order-param">
-            <a href="#">По убыванию</a>
+            <a href="#" role="menuitem">По убыванию</a>
           </li>
         </ul>
       </div>
@@ -204,7 +204,7 @@
       </ul>
 
       <div class="pagination">
-        <a class="pagination-btn pagination-btn--back" aria-label="Вернуться к предыдущей странице">Назад</a>
+        <a class="pagination-btn pagination-btn--back">Назад</a>
         <ul class="pagination-list" aria-label="Список страниц каталога">
           <li class="pagination-item pagination-item--current" aria-current="page">
             <span class="visually-hidden">Текущий пункт:</span>
@@ -213,7 +213,7 @@
           <li class="pagination-item"><a href="catalog-2.html" aria-label="Перейти к странице 2">2</a></li>
           <li class="pagination-item"><a href="catalog-3.html" aria-label="Перейти к странице 3">3</a></li>
         </ul>
-        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html" aria-label="Перейти к следущей странице">Вперед</a>
+        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html">Вперед</a>
       </div>
     </section>
   </main>
