@@ -58,31 +58,30 @@
       <form action="#" method="get">
         <fieldset class="filter">
           <legend>Стоимость</legend>
-          <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500" aria-valuemin="0"
-            aria-valuemax="10000" aria-valuenow="500">
+          <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500">
           <button id="min-price-control" type="button">Уменьшить цену</button>
           <button id="max-price-control" type="button">Увеличить цену</button>
         </fieldset>
         <fieldset class="filter">
           <legend>Цвет</legend>
-          <ul class="filter-list">
-            <li>
+          <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
+            <li role="option">
               <input id="color-black" name="product-color" type="checkbox" value="black">
               <label class="filter-title" for="color-black">Черный</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-white" name="product-color" type="checkbox" value="white">
               <label class="filter-title" for="color-white">Белый</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-blue" name="product-color" type="checkbox" value="blue">
               <label class="filter-title" for="color-blue">Синий</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-red" name="product-color" type="checkbox" value="red">
               <label class="filter-title" for="color-red">Красный</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-pink" name="product-color" type="checkbox" value="pink">
               <label class="filter-title" for="color-pink">Розовый</label>
             </li>
@@ -90,7 +89,7 @@
         </fieldset>
         <fieldset class="filter">
           <legend>Bluetooth</legend>
-          <ul class="filter-list">
+          <ul class="filter-list" aria-label="Поддержка Bluetooth" role="radiogroup">
             <li>
               <input id="bluetooth-ready" name="bluetooth-availability" type="radio">
               <label class="filter-title" for="bluetooth-ready">Есть</label>
@@ -112,7 +111,7 @@
         <ul class="sorting-params" aria-label="Сортировка списка товаров по критериям" role="menubar">
           <li class="sorting-param sorting-param--current" aria-selected="true">
             <span class="visually-hidden">Текущий пункт:</span>
-            <a href="#" role="menuitem">По цене</a>
+            <a role="menuitem">По цене</a>
           </li>
           <li class="sorting-param">
             <a href="#" role="menuitem">По типу</a>
@@ -124,7 +123,7 @@
         <ul class="order-params" aria-label="Сортировка списка товаров по порядку" role="menubar">
           <li class="order-param order-param--current" aria-selected="true">
             <span class="visually-hidden">Текущий пункт:</span>
-            <a href="#" role="menuitem">По возрастанию</a>
+            <a role="menuitem">По возрастанию</a>
           </li>
           <li class="order-param">
             <a href="#" role="menuitem">По убыванию</a>
@@ -203,17 +202,17 @@
         </li>
       </ul>
 
-      <div class="pagination">
-        <a class="pagination-btn pagination-btn--back">Назад</a>
+      <div class="pagination" role="menubar">
+        <a class="pagination-btn pagination-btn--back" role="menuitem">Назад</a>
         <ul class="pagination-list" aria-label="Список страниц каталога">
           <li class="pagination-item pagination-item--current" aria-current="page">
             <span class="visually-hidden">Текущий пункт:</span>
-            <a>1</a>
+            <a role="menuitem">1</a>
           </li>
-          <li class="pagination-item"><a href="catalog-2.html" aria-label="Перейти к странице 2">2</a></li>
-          <li class="pagination-item"><a href="catalog-3.html" aria-label="Перейти к странице 3">3</a></li>
+          <li class="pagination-item"><a href="catalog-2.html" aria-label="Перейти к странице 2" role="menuitem">2</a></li>
+          <li class="pagination-item"><a href="catalog-3.html" aria-label="Перейти к странице 3" role="menuitem">3</a></li>
         </ul>
-        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html">Вперед</a>
+        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html" role="menuitem">Вперед</a>
       </div>
     </section>
   </main>
