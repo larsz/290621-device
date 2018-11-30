@@ -144,6 +144,116 @@
       </ul>
     </section>
 
+    <section class="featured-categories">
+      <h2 class="visually-hidden">Популярные категории</h2>
+      <ul class="featured-categories-list">
+        <li class="featured-category">
+          <a href="#">
+            <h3 class="featured-category-title">Виртуальная реальность</h3>
+            <img src="img/popular-1.svg" alt="Виртуальная реальность" width="97" height="55">
+          </a>
+        </li>
+        <li class="featured-category">
+          <a href="#">
+            <h3 class="featured-category-title">Моноподы для селфи</h3>
+            <img src="img/popular-2.svg" alt="Моноподы для селфи" width="86" height="117">
+          </a>
+        </li>
+        <li class="featured-category">
+          <a href="#">
+            <h3 class="featured-category-title">Экшн-камеры</h3>
+            <img src="img/popular-3.svg" alt="Экшн-камеры" width="71" height="87">
+          </a>
+        </li>
+        <li class="featured-category">
+          <a href="#">
+            <h3 class="featured-category-title">Фитнес-браслеты</h3>
+            <img src="img/popular-4.svg" alt="Фитнес-браслеты" width="107" height="65">
+          </a>
+        </li>
+        <li class="featured-category">
+          <a href="#">
+            <h3 class="featured-category-title">Умные часы</h3>
+            <img src="img/popular-5.svg" alt="Умные часы" width="56" height="98">
+          </a>
+        </li>
+        <li class="featured-category">
+          <a href="#">
+            <h3 class="featured-category-title">Квадрокоптеры</h3>
+            <img src="img/popular-6.svg" alt="Квадрокоптеры" width="132" height="69">
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="services">
+      <h2 class="visually-hidden">Наши преимущества</h2>
+      <ul class="tabs-list" role="tablist">
+        <li class="tab-title tab-title--current" role="presentation">
+          <a id="delivery-tab" href="#delivery" role="tab" aria-controls="delivery" aria-selected="true">Доставка</a>
+        </li>
+        <li class="tab-title">
+          <a id="warranty-tab" href="#warranty" role="tab" aria-controls="warranty">Гарантия</a>
+        </li>
+        <li class="tab-title">
+          <a id="loan-tab" href="#loan" role="tab" aria-controls="loan">Кредит</a>
+        </li>
+      </ul>
+
+      <section id="delivery" class="tab-panel" role="tabpanel" aria-labelledby="delivery-tab">
+        <h3>Доставка</h3>
+        <p>
+          Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+          заработаем, поднимая его на ваш этаж.
+        </p>
+        <img src="img/delivery.svg" alt="Доставка" width="136" height="164">
+      </section>
+
+      <section id="warranty" class="tab-panel" role="tabpanel" aria-labelledby="warranty-tab" aria-hidden="true">
+        <h3>Гарантия</h3>
+        <p>
+          Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар,
+          не дом, конечно же.
+        </p>
+        <img src="img/warranty.svg" alt="Гарантия" width="171" height="195">
+      </section>
+
+      <section id="loan" class="tab-panel" role="tabpanel" aria-labelledby="loan-tab" aria-hidden="true">
+        <h3>Кредит</h3>
+        <p>
+          Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
+          кредита. Выгодные для нашего банка, разумеется.
+        </p>
+        <img src="img/credit.svg" alt="Кредит" width="156" height="188">
+      </section>
+    </div>
+
+    <section class="featured-brands">
+      <h2 class="visually-hidden">Популярные бренды</h2>
+      <ul class="brands-list">
+        <li>
+          <a href="#">
+            <img src="img/logo-1.png" alt="Логотип «DJI»" width="260" height="100">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/logo-2.png" alt="Логотип «SP Gadgets»" width="260" height="100">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/logo-3.png" alt="Логотип «GoPro»" width="260" height="100">
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="img/logo-4.png" alt="Логотип «VIVE»" width="260" height="100">
+          </a>
+        </li>
+      </ul>
+    </section>
+
     <section class="about-us">
       <h2>О нас</h2>
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
@@ -162,9 +272,10 @@
     <section class="contacts">
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав к нам в офис. Заодно, вы сможете проверить работоспособность покупки.</p>
-
-      <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу Москва, ул. Строителей, 15">
-      <button class="btn" type="button">Напишите нам</button>
+      <p>
+        <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу Москва, ул. Строителей, 15"></a>
+      </p>
+      <a class="btn" href="#">Напишите нам</a>
     </section>
   </main>
 
@@ -226,7 +337,7 @@
   <section class="modal modal-map" role="dialog" aria-modal="true">
     <h2 class="visually-hidden">Как до нас добраться</h2>
     <p>
-      <img src="img/map-big.jpg" alt="Офис компании по адресу Москва, ул. Строителей, 15" width="960" height="559">
+      <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу Москва, ул. Строителей, 15">
     </p>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
