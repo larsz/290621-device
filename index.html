@@ -8,38 +8,40 @@
 
 <body>
   <header class="main-header">
+    <span class="main-logo">
+      <a class="main-logo-url">Device</a>
+    </span>
     <nav class="main-navigation">
-      <span class="main-logo">
-        <a class="main-logo-url">Device</a>
-      </span>
-      <ul class="site-navigation">
+      <ul class="site-navigation" aria-label="Основное меню" role="menubar">
         <li class="site-navigation-item">
-          <a href="catalog.html">Каталог товаров</a>
-          <ul class="sub-navigation">
-            <li class="site-navigation-item"><a href="#">Виртуальная реальность</a></li>
-            <li class="site-navigation-item"><a href="#">Моноподы для селфи</a></li>
-            <li class="site-navigation-item"><a href="#">Экшн-камеры</a></li>
-            <li class="site-navigation-item"><a href="#">Фитнес-браслеты</a></li>
-            <li class="site-navigation-item"><a href="#">Умные часы</a></li>
-            <li class="site-navigation-item"><a href="#">Квадрокоптеры</a></li>
+          <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
+          <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
+            <li class="site-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
+            <li class="site-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
           </ul>
         </li>
-        <li class="site-navigation-item"><a href="#">Доставка</a></li>
-        <li class="site-navigation-item"><a href="#">Гарантия</a></li>
-        <li class="site-navigation-item"><a href="#">Контакты</a></li>
+        <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
+        <li class="site-navigation-item"><a href="#" role="menuitem">Гарантия</a></li>
+        <li class="site-navigation-item"><a href="#" role="menuitem">Контакты</a></li>
       </ul>
-      <div class="secondary-navigation">
-        <div class="search">
-          <!-- тут будет форма поиска -->
-        </div>
-        <ul class="user-navigation">
-          <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
-          <li><a class="logout" href="#">Выйти</a></li>
-        </ul>
-        <a class="compare" href="#">Сравнить</a>
-        <a class="cart" href="#">Корзина</a>
-      </div>
     </nav>
+    <div class="secondary-navigation">
+      <form class="search" role="search" action="#" method="get">
+        <input type="search" class="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+        <button class="btn" type="submit">Искать</button>
+      </form>
+      <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
+        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
+      </ul>
+      <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
+        <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
+        <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
+      </ul>
+    </div>
   </header>
   <main class="container">
     <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
@@ -57,11 +59,12 @@
             <a class="btn" href="product.html">Подробнее</a>
 
             <table class="featured-product-params">
+              <caption class="visually-hidden">Технические характеристики</caption>
               <thead>
                 <tr>
-                  <th>Длина палки</th>
-                  <th>Вес палки</th>
-                  <th>Материал</th>
+                  <th scope="col">Длина палки</th>
+                  <th scope="col">Вес палки</th>
+                  <th scope="col">Материал</th>
                 </tr>
               </thead>
               <tbody>
@@ -85,9 +88,10 @@
             <a class="btn" href="product.html">Подробнее</a>
 
             <table class="featured-product-params">
+              <caption class="visually-hidden">Технические характеристики</caption>
               <thead>
                 <tr>
-                  <th>Без подзарядки</th>
+                  <th scope="col">Без подзарядки</th>
                 </tr>
               </thead>
               <tbody>
@@ -105,14 +109,16 @@
           </div>
           <div class="slide-description">
             <b class="slide-title">Порхает как бабочка, жалит как пчела!</b>
-            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную
+              камеру.</p>
             <a class="btn" href="product.html">Подробнее</a>
 
             <table class="featured-product-params">
+              <caption class="visually-hidden">Технические характеристики</caption>
               <thead>
                 <tr>
-                  <th>Дальность полета</th>
-                  <th>Радиус поражения</th>
+                  <th scope="col">Дальность полета</th>
+                  <th scope="col">Радиус поражения</th>
                 </tr>
               </thead>
               <tbody>
@@ -126,14 +132,14 @@
         </li>
       </ul>
       <ul class="slider-navigation">
-        <li class="slider-navigation-item slider-navigation-item--active">
-          <button>1</button>
+        <li class="slider-navigation-item">
+          <button>Предыдущий товар</button>
+        </li>
+        <li class="slider-navigation-item slider-navigation-item--active" aria-selected="true">
+          <button>Текущий товар</button>
         </li>
         <li class="slider-navigation-item">
-          <button>2</button>
-        </li>
-        <li class="slider-navigation-item">
-          <button>3</button>
+          <button>Следущий товар</button>
         </li>
       </ul>
     </section>
@@ -141,7 +147,8 @@
     <section class="about-us">
       <h2>О нас</h2>
       <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+      <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными
+        компаниями:</p>
 
       <ul>
         <li><b>Деловые линии</b></li>
@@ -156,8 +163,8 @@
       <h2>Контакты</h2>
       <p>Вы можете забрать товар сами, заехав к нам в офис. Заодно, вы сможете проверить работоспособность покупки.</p>
 
-      <img src="img/map.jpg" width="560" height="222" alt="карта проезда">
-      <button class="btn">Напишите нам</button>
+      <img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу Москва, ул. Строителей, 15">
+      <button class="btn" type="button">Напишите нам</button>
     </section>
   </main>
 
@@ -168,39 +175,60 @@
       </span>
       г. Москва, ул. Строителей, 15
     </p>
-    <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
-    <ul class="footer-navigation">
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Контакты</a></li>
+    <p class="footer-phone">
+      <a href="tel:+7-495-495-95-95">Тел.: +7 (495) 495-95-95</a>
+    </p>
+    <ul class="footer-navigation" aria-label="Условия покупки" role="menubar">
+      <li><a href="#" role="menuitem">Доставка</a></li>
+      <li><a href="#" role="menuitem">Гарантия</a></li>
+      <li><a href="#" role="menuitem">Контакты</a></li>
     </ul>
     <div class="footer-social">
-      <ul>
-        <li><a class="social-btn social-btn--vk" href="https://vk.com/">Вконтакте</a></li>
-        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/">Фейсбук</a></li>
-        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/">Инстаграм</a></li>
+      <ul aria-label="Мы в соцсетях" role="menubar">
+        <li><a class="social-btn social-btn--vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
+        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
+        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
-      <a class="powered-by" href="https://htmlacademy.ru">HTML Academy</a>
+      <a class="powered-by" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
     <div class="secondary-navigation">
-      <ul class="user-navigation">
-        <li class="login">Войти</li>
+      <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
+        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
       </ul>
-      <a class="compare">Сравнить</a>
-      <a class="cart">Корзина</a>
+      <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
+        <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
+        <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
+      </ul>
     </div>
   </footer>
 
-  <section class="modal modal-feedback-form">
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+  <section class="modal modal-feedback-form" role="dialog" aria-modal="true">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="feedback-form" action="#" method="post">
+      <p>
+        <label for="customer-name">Ваше имя:</label>
+        <input id="customer-name" name="customer-name" type="text" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="customer-email">Ваше e-mail:</label>
+        <input id="customer-email" name="customer-email" type="email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="customer-message">Текст письма:</label>
+        <textarea id="customer-message" name="customer-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
+    </form>
   </section>
 
-  <section class="modal modal-map">
+  <section class="modal modal-map" role="dialog" aria-modal="true">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <span class="modal-close">x</span>
+    <p>
+      <img src="img/map-big.jpg" alt="Офис компании по адресу Москва, ул. Строителей, 15" width="960" height="559">
+    </p>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
 </body>

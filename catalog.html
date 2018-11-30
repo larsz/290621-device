@@ -8,74 +8,80 @@
 
 <body>
   <header class="main-header">
+    <span class="main-logo">
+      <a class="main-logo-url" href="index.html">Device</a>
+    </span>
     <nav class="main-navigation">
-      <span class="main-logo">
-        <a class="main-logo-url" href="index.html">Device</a>
-      </span>
-      <ul class="site-navigation">
+      <ul class="site-navigation" aria-label="Основное меню" role="menubar">
         <li class="site-navigation-item">
-          <a>Каталог товаров</a>
-          <ul class="sub-navigation">
-            <li class="site-navigation-item"><a href="#">Виртуальная реальность</a></li>
-            <li class="site-navigation-item"><a href="#">Моноподы для селфи</a></li>
-            <li class="site-navigation-item"><a href="#">Экшн-камеры</a></li>
-            <li class="site-navigation-item"><a href="#">Фитнес-браслеты</a></li>
-            <li class="site-navigation-item"><a href="#">Умные часы</a></li>
-            <li class="site-navigation-item"><a href="#">Квадрокоптеры</a></li>
+          <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
+          <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
+            <li class="site-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Моноподы для селфи</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
+            <li class="site-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
           </ul>
         </li>
-        <li class="site-navigation-item"><a href="#">Доставка</a></li>
-        <li class="site-navigation-item"><a href="#">Гарантия</a></li>
-        <li class="site-navigation-item"><a href="#">Контакты</a></li>
+        <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
+        <li class="site-navigation-item"><a href="#" role="menuitem">Гарантия</a></li>
+        <li class="site-navigation-item"><a href="#" role="menuitem">Контакты</a></li>
       </ul>
-      <div class="secondary-navigation">
-        <div class="search">
-          <!-- тут будет форма поиска -->
-        </div>
-        <ul class="user-navigation">
-          <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
-          <li><a class="logout" href="logout.html">Выйти</a></li>
-        </ul>
-        <a class="compare" href="#">Сравнить</a>
-        <a class="cart" href="#">Корзина</a>
-      </div>
     </nav>
+    <div class="secondary-navigation">
+      <form class="search" role="search" action="#" method="get">
+        <input type="search" class="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+        <button type="submit">Искать</button>
+      </form>
+      <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
+        <li><a class="user-profile-url" href="#" role="menuitem">Валентин Петухов</a></li>
+        <li><a class="logout-url" href="#" role="menuitem">Выйти</a></li>
+      </ul>
+      <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
+        <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
+        <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
+      </ul>
+    </div>
   </header>
   <main class="container">
     <h1 class="page-title">Моноподы для селфи</h1>
-    <ul class="breadcrumbs">
-      <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-      <li class="breadcrumb-item"><a>Каталог товаров</a></li>
-      <li class="breadcrumb-current-item">Моноподы для селфи</li>
+    <ul class="breadcrumbs" aria-label="Хлебные крошки" role="menubar">
+      <li class="breadcrumb-item"><a href="index.html" role="menuitem">Главная</a></li>
+      <li class="breadcrumb-item"><a href="all-products.html" role="menuitem">Каталог товаров</a></li>
+      <li class="breadcrumb-item breadcrumb-item--current" aria-current="page"><span class="visually-hidden">Текущий
+          пункт:</span>Моноподы для селфи</li>
     </ul>
 
     <section class="filters">
-      <h2 class="visually-hidden">Фильтр товаров</h2>
+      <h2>Фильтр:</h2>
       <form action="#" method="get">
         <fieldset class="filter">
           <legend>Стоимость</legend>
-          <!-- Здесь будет слайдер по ценам -->
+          <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500">
+          <button id="min-price-control" type="button">Уменьшить цену</button>
+          <button id="max-price-control" type="button">Увеличить цену</button>
         </fieldset>
         <fieldset class="filter">
           <legend>Цвет</legend>
-          <ul class="filter-list">
-            <li>
+          <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
+            <li role="option">
               <input id="color-black" name="product-color" type="checkbox" value="black">
               <label class="filter-title" for="color-black">Черный</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-white" name="product-color" type="checkbox" value="white">
               <label class="filter-title" for="color-white">Белый</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-blue" name="product-color" type="checkbox" value="blue">
               <label class="filter-title" for="color-blue">Синий</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-red" name="product-color" type="checkbox" value="red">
               <label class="filter-title" for="color-red">Красный</label>
             </li>
-            <li>
+            <li role="option">
               <input id="color-pink" name="product-color" type="checkbox" value="pink">
               <label class="filter-title" for="color-pink">Розовый</label>
             </li>
@@ -83,7 +89,7 @@
         </fieldset>
         <fieldset class="filter">
           <legend>Bluetooth</legend>
-          <ul class="filter-list">
+          <ul class="filter-list" aria-label="Поддержка Bluetooth" role="radiogroup">
             <li>
               <input id="bluetooth-ready" name="bluetooth-availability" type="radio">
               <label class="filter-title" for="bluetooth-ready">Есть</label>
@@ -100,6 +106,30 @@
 
     <section class="catalog">
       <h2 class="visually-hidden">Список моноподов для селфи</h2>
+      <div class="sorting-controls">
+        <b class="sorting-title">Сортировка:</b>
+        <ul class="sorting-params" aria-label="Сортировка списка товаров по критериям" role="menubar">
+          <li class="sorting-param sorting-param--current" aria-selected="true">
+            <span class="visually-hidden">Текущий пункт:</span>
+            <a role="menuitem">По цене</a>
+          </li>
+          <li class="sorting-param">
+            <a href="#" role="menuitem">По типу</a>
+          </li>
+          <li class="sorting-param">
+            <a href="#" role="menuitem">По популярности</a>
+          </li>
+        </ul>
+        <ul class="order-params" aria-label="Сортировка списка товаров по порядку" role="menubar">
+          <li class="order-param order-param--current" aria-selected="true">
+            <span class="visually-hidden">Текущий пункт:</span>
+            <a role="menuitem">По возрастанию</a>
+          </li>
+          <li class="order-param">
+            <a href="#" role="menuitem">По убыванию</a>
+          </li>
+        </ul>
+      </div>
       <ul class="products-list">
         <li class="product-item">
           <a class="product-url" href="product.html">
@@ -172,14 +202,17 @@
         </li>
       </ul>
 
-      <div class="pagination">
-        <a class="pagination-btn pagination-btn--back">Назад</a>
-        <ul class="pagination-list">
-          <li class="pagination-item pagination-item--current"><a>1</a></li>
-          <li class="pagination-item"><a href="catalog-2.html">2</a></li>
-          <li class="pagination-item"><a href="catalog-3.html">3</a></li>
+      <div class="pagination" role="menubar">
+        <a class="pagination-btn pagination-btn--back" role="menuitem">Назад</a>
+        <ul class="pagination-list" aria-label="Список страниц каталога">
+          <li class="pagination-item pagination-item--current" aria-current="page">
+            <span class="visually-hidden">Текущий пункт:</span>
+            <a role="menuitem">1</a>
+          </li>
+          <li class="pagination-item"><a href="catalog-2.html" aria-label="Перейти к странице 2" role="menuitem">2</a></li>
+          <li class="pagination-item"><a href="catalog-3.html" aria-label="Перейти к странице 3" role="menuitem">3</a></li>
         </ul>
-        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html">Вперед</a>
+        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html" role="menuitem">Вперед</a>
       </div>
     </section>
   </main>
@@ -191,41 +224,62 @@
       </span>
       г. Москва, ул. Строителей, 15
     </p>
-    <p class="footer-phone">Тел.: +7 (495) 495-95-95</p>
-    <ul class="footer-navigation">
-      <li><a href="#">Доставка</a></li>
-      <li><a href="#">Гарантия</a></li>
-      <li><a href="#">Контакты</a></li>
+    <p class="footer-phone">
+      <a href="tel:+7-495-495-95-95">Тел.: +7 (495) 495-95-95</a>
+    </p>
+    <ul class="footer-navigation" aria-label="Условия покупки" role="menubar">
+      <li><a href="#" role="menuitem">Доставка</a></li>
+      <li><a href="#" role="menuitem">Гарантия</a></li>
+      <li><a href="#" role="menuitem">Контакты</a></li>
     </ul>
     <div class="footer-social">
-      <ul>
-        <li><a class="social-btn social-btn--vk" href="https://vk.com/">Вконтакте</a></li>
-        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/">Фейсбук</a></li>
-        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/">Инстаграм</a></li>
+      <ul aria-label="Мы в соцсетях" role="menubar">
+        <li><a class="social-btn social-btn--vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
+        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
+        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
-      <a class="powered-by" href="https://htmlacademy.ru">HTML Academy</a>
+      <a class="powered-by" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
     <div class="secondary-navigation">
-      <ul class="user-navigation">
-        <li><a class="user-profile" href="user-profile.html">Валентин Петухов</a></li>
-        <li><a class="logout" href="#">Выйти</a></li>
+      <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
+        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
       </ul>
-      <a class="compare">Сравнить</a>
-      <a class="cart">Корзина</a>
+      <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
+        <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
+        <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
+      </ul>
     </div>
   </footer>
 
-  <section class="modal modal-feedback-form">
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+  <section class="modal modal-feedback-form" role="dialog" aria-modal="true">
+    <h2 class="visually-hidden">Напишите нам</h2>
+    <form class="feedback-form" action="#" method="post">
+      <p>
+        <label for="customer-name">Ваше имя:</label>
+        <input id="customer-name" name="customer-name" type="text" placeholder="Имя Фамилия">
+      </p>
+      <p>
+        <label for="customer-email">Ваше e-mail:</label>
+        <input id="customer-email" name="customer-email" type="email" placeholder="email@example.com">
+      </p>
+      <p>
+        <label for="customer-message">Текст письма:</label>
+        <textarea id="customer-message" name="customer-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
+    </form>
   </section>
 
-  <section class="modal modal-map">
+  <section class="modal modal-map" role="dialog" aria-modal="true">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <span class="modal-close">x</span>
+    <p>
+      <img src="img/map-big.jpg" alt="Офис компании по адресу Москва, ул. Строителей, 15" width="960" height="559">
+    </p>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
+
 
 </body>
 
