@@ -79,6 +79,8 @@ a:active {
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
+  background-color: #fff;
+  border: none;
 }
 
 h2 {
@@ -117,6 +119,10 @@ h2 {
   font-size: 15px;
   line-height: 36px;
   text-transform: initial;
+}
+
+.logout-url {
+  opacity: .3;
 }
 
 /* Bestsellers slider
@@ -169,6 +175,123 @@ h2 {
 }
 .tab-panel {
   background-color: #e5e5e5;
+}
+
+/* Catalog page
+- - - - - - - - - - - - - - - - - - - - */
+.page-title {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  color: #000;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item-current {
+  opacity: .3;
+}
+
+.breadcrumb-item a:hover,
+.breadcrumb-item a:focus {
+  opacity: .6;
+}
+
+.breadcrumb-item a:active {
+  opacity: .1;
+}
+
+/* Filters
+- - - - - - - - - - - - - - - - - - - - */
+.filters {
+  background-color: #efefef;
+}
+
+.filters h2 {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #dbdbdb;
+}
+
+.filters fieldset {
+  border: none;
+}
+
+.filters legend {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.filter-title {
+  font-size: 14px;
+  line-height: 40px;
+}
+
+/* Sorting
+- - - - - - - - - - - - - - - - - - - - */
+.sorting-controls {
+  background-color: #ebebeb;
+}
+.sorting-title {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.sorting-param:not(.sorting-param-current) a,
+.order-param:not(.order-param-current) a {
+  opacity: .3;
+}
+
+/* Products
+- - - - - - - - - - - - - - - - - - - - */
+.product-title {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000;
+}
+
+.product-price {
+  font-family: "Gilroy Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Pagination
+- - - - - - - - - - - - - - - - - - - - */
+.pagination {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  background-color: #ebebeb;
+  color: #a4a4a4;
+}
+.pagination-btn:hover,
+.pagination-btn:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination-btn:active {
+  background-color: #d9d9d9;
+  opacity: .3;
+}
+.pagination-item a {
+  color: #a4a4a4;
+}
+.pagination-item a:hover,
+.pagination-item a:focus {
+  color: #666;
+  opacity: 1;
+}
+.pagination-item a:active {
+  color: #000;
+  opacity: 1;
+}
+
+.pagination-item-current a {
+  color: #000;
 }
 
 /* Footer
