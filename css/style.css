@@ -29,17 +29,17 @@ body {
 }
 
 a {
-  color: #000;
+  color: rgba(0, 0, 0, 1);
   text-decoration: none;
 }
 
 a:hover,
 a:focus {
-  opacity: .6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 a:active {
-  opacity: .3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .visually-hidden {
@@ -122,7 +122,7 @@ h2 {
 }
 
 .logout-url {
-  opacity: .3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Bestsellers slider
@@ -133,14 +133,17 @@ h2 {
   line-height: 56px;
   color: #000;
 }
+
 .featured-product-params thead {
   display: table-footer-group;
 }
+
 .featured-product-params th {
   font-size: 13px;
   line-height: 20px;
   font-weight: 400;
 }
+
 .featured-product-params td {
   font-family: "Gilroy Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 36px;
@@ -161,18 +164,22 @@ h2 {
   background-color: #e5e5e5;
   border-right: 7px solid #000;
 }
+
 .tab-title {
   font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
+
 .tab-title-current {
   background-color: #000;
   color: #f7e184;
 }
+
 .tab-title-current a {
   color: #f7e184;
 }
+
 .tab-panel {
   background-color: #e5e5e5;
 }
@@ -188,16 +195,16 @@ h2 {
 
 .breadcrumb-item a,
 .breadcrumb-item-current {
-  opacity: .3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .breadcrumb-item a:hover,
 .breadcrumb-item a:focus {
-  opacity: .6;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .breadcrumb-item a:active {
-  opacity: .1;
+  color: rgba(0, 0, 0, 0.1);
 }
 
 /* Filters
@@ -232,16 +239,33 @@ h2 {
 - - - - - - - - - - - - - - - - - - - - */
 .sorting-controls {
   background-color: #ebebeb;
+  font-size: 14px;
+  line-height: 18px;
 }
+
 .sorting-title {
   font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
 }
+
 .sorting-param:not(.sorting-param-current) a,
 .order-param:not(.order-param-current) a {
-  opacity: .3;
+  color: rgba(0, 0, 0, 0.3);
 }
+
+.sorting-param:not(.sorting-param-current) a:hover,
+.sorting-param:not(.sorting-param-current) a:focus,
+.order-param:not(.order-param-current) a:hover,
+.order-param:not(.order-param-current) a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-param:not(.sorting-param-current) a:active,
+.order-param:not(.order-param-current) a:active {
+  color: rgba(0, 0, 0, 1);
+}
+
 
 /* Products
 - - - - - - - - - - - - - - - - - - - - */
@@ -268,6 +292,7 @@ h2 {
   background-color: #ebebeb;
   color: #a4a4a4;
 }
+
 .pagination-btn:hover,
 .pagination-btn:focus {
   background-color: #d9d9d9;
@@ -275,23 +300,22 @@ h2 {
 
 .pagination-btn:active {
   background-color: #d9d9d9;
-  opacity: .3;
-}
-.pagination-item a {
-  color: #a4a4a4;
-}
-.pagination-item a:hover,
-.pagination-item a:focus {
-  color: #666;
-  opacity: 1;
-}
-.pagination-item a:active {
-  color: #000;
-  opacity: 1;
+  color: rgba(0, 0, 0, 0.3);
+
 }
 
+.pagination-item a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pagination-item a:active,
 .pagination-item-current a {
-  color: #000;
+  color: rgba(0, 0, 0, 1);
 }
 
 /* Footer
@@ -302,12 +326,51 @@ h2 {
 }
 
 .main-footer a {
-  color: #fff;
+  color: rgba(255, 255, 255, 1);
 }
 
 .main-footer .main-logo-url {
-  color: #ffc600;
+  color: rgba(255, 198, 0, 1);
 }
+
+.main-footer .main-logo-url:hover,
+.main-footer .main-logo-url:focus {
+  color: rgba(255, 198, 0, 0.6);
+}
+
+.main-footer .main-logo-url:active {
+  color: rgba(255, 198, 0, 0.3);
+}
+
+.footer-navigation {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.footer-navigation a:hover,
+.footer-navigation a:focus {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-secondary-navigation a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-secondary-navigation a:hover,
+.footer-secondary-navigation a:focus {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer-secondary-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 
 /* Modals
 - - - - - - - - - - - - - - - - - - - - */
@@ -322,12 +385,14 @@ h2 {
   font-size: 18px;
   line-height: 24px;
 }
+
 .feedback-form input,
 .feedback-form textarea {
   font: inherit;
   background-color: #f2f2f2;
   border: 3px solid #f2f2f2;
 }
+
 .feedback-form input:hover,
 .feedback-form textarea:hover {
   background-color: #eaeaea;
@@ -345,5 +410,3 @@ h2 {
   background-color: #f6dada;
   border-color: #f6dada;
 }
-
-
