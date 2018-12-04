@@ -125,6 +125,38 @@ h2 {
   color: rgba(0, 0, 0, 0.3);
 }
 
+/* search
+- - - - - - - - - - - - - - - - - - - - */
+.search input {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.search input:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.search input:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+.search-btn {
+  font: inherit;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.search-btn:hover,
+.search-btn:focus {
+  background-color: #000;
+  color: rgba(255, 255, 255, 1);
+}
+
+.search-btn:active {
+  background-color: #000;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 /* Bestsellers slider
 - - - - - - - - - - - - - - - - - - - - */
 .bestsellers .slide-title {
@@ -266,7 +298,6 @@ h2 {
   color: rgba(0, 0, 0, 1);
 }
 
-
 /* Products
 - - - - - - - - - - - - - - - - - - - - */
 .product-title {
@@ -371,7 +402,6 @@ h2 {
   color: rgba(255, 255, 255, 0.3);
 }
 
-
 /* Modals
 - - - - - - - - - - - - - - - - - - - - */
 .modal {
@@ -389,8 +419,11 @@ h2 {
 .feedback-form input,
 .feedback-form textarea {
   font: inherit;
-  background-color: #f2f2f2;
+  font-size: 14px;
+  line-height: 18px;
   border: 3px solid #f2f2f2;
+  background-color: #f2f2f2;
+  color: rgba(70, 70, 70, 0.4);
 }
 
 .feedback-form input:hover,
@@ -401,8 +434,9 @@ h2 {
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-  background-color: #fff;
   border-color: #f7e296;
+  background-color: #fff;
+  color: rgba(70, 70, 70, 1);
 }
 
 .feedback-form input:invalid,
