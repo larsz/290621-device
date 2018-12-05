@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Gilroy Light";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 400;
-  src: local("Gilroy Light"),
+  src: local("Gilroy"),
     url("../fonts/gilroylight.woff2") format("woff2"),
     url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Gilroy Bold";
+  font-family: "Gilroy";
   font-style: normal;
   font-weight: 700;
-  src: local("Gilroy Bold"),
+  src: local("Gilroy"),
     url("../fonts/gilroyextrabold.woff2") format("woff2"),
     url("../fonts/gilroyextrabold.woff") format("woff");
 }
@@ -23,14 +23,14 @@ body {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 15px;
   line-height: 30px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.15px;
 
   background-color: #fff;
   color: #464646;
 }
 
 a {
-  color: rgba(0, 0, 0, 1);
+  color: #000;
   text-decoration: none;
 }
 
@@ -76,10 +76,11 @@ a:active {
 }
 
 .btn {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.2em;
+  font-weight: 700;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
   background-color: #fff;
   border: none;
@@ -87,9 +88,10 @@ a:active {
 
 h2,
 h3 {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
+  font-weight: 700;
   color: #000;
 }
 
@@ -102,7 +104,7 @@ h3 {
 /* logo
 - - - - - - - - - - - - - - - - - - - - */
 .main-logo-url {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 48px;
   line-height: 1;
   font-weight: 700;
@@ -112,10 +114,11 @@ h3 {
 /* main nav
 - - - - - - - - - - - - - - - - - - - - */
 .site-navigation-item {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.2em;
+  font-weight: 700;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
 }
 
@@ -123,7 +126,7 @@ h3 {
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 15px;
   line-height: 36px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.15px;
   text-transform: initial;
 }
 
@@ -135,7 +138,7 @@ h3 {
 - - - - - - - - - - - - - - - - - - - - */
 .search input {
   font: inherit;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.15px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -144,7 +147,7 @@ h3 {
 }
 
 .search input:focus {
-  color: rgba(0, 0, 0, 1);
+  color: #000;
 }
 
 .search-btn {
@@ -157,7 +160,7 @@ h3 {
 .search-btn:hover,
 .search-btn:focus {
   background-color: #000;
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
 }
 
 .search-btn:active {
@@ -168,9 +171,10 @@ h3 {
 /* Bestsellers slider
 - - - - - - - - - - - - - - - - - - - - */
 .bestsellers .slide-title {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 56px;
+  font-weight: 700;
   color: #000;
 }
 
@@ -185,9 +189,10 @@ h3 {
 }
 
 .featured-product-params td {
-  font-family: "Gilroy Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 36px;
   line-height: 48px;
+  font-weight: 400;
 }
 
 /* Featured Categories
@@ -205,10 +210,11 @@ h3 {
 }
 
 .tab-title {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
-  letter-spacing: 0.2em;
+  font-weight: 700;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
 }
 
@@ -228,18 +234,20 @@ h3 {
 /* About
 - - - - - - - - - - - - - - - - - - - - */
 .about-us li {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 40px;
+  font-weight: 700;
   color: #000;
 }
 
 /* Catalog page
 - - - - - - - - - - - - - - - - - - - - */
 .page-title {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
+  font-weight: 700;
   color: #000;
 }
 
@@ -266,7 +274,7 @@ h3 {
 .filters h2 {
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.2em;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   background-color: #dbdbdb;
 }
@@ -276,9 +284,10 @@ h3 {
 }
 
 .filters legend {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
 }
 
 .filter-title {
@@ -350,10 +359,11 @@ h3 {
 }
 
 .sorting-title {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.2em;
+  font-weight: 700;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   color: #000;
 }
@@ -377,7 +387,7 @@ h3 {
 
 .sorting-param:not(.sorting-param-current) a:active,
 .order-param:not(.order-param-current) a:active {
-  color: rgba(0, 0, 0, 1);
+  color: #000;
 }
 
 /* Products
@@ -389,9 +399,10 @@ h3 {
 }
 
 .product-price {
-  font-family: "Gilroy Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
+  font-weight: 400;
 }
 
 .compare {
@@ -400,7 +411,7 @@ h3 {
   font: inherit;
   font-size: 13px;
   line-height: 36px;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.13px;
 
   background: none;
   color: #000;
@@ -421,10 +432,11 @@ h3 {
   display: block;
   padding: 15px 10px;
 
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.7px;
   text-transform: uppercase;
 
   border-radius: 50%;
@@ -436,10 +448,11 @@ h3 {
 /* Pagination
 - - - - - - - - - - - - - - - - - - - - */
 .pagination {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.2em;
+  font-weight: 700;
+  letter-spacing: 3.2px;
   text-transform: uppercase;
   background-color: #ebebeb;
   color: #a4a4a4;
@@ -467,7 +480,7 @@ h3 {
 
 .pagination-item a:active,
 .pagination-item-current a {
-  color: rgba(0, 0, 0, 1);
+  color: #000;
 }
 
 /* Footer
@@ -478,11 +491,11 @@ h3 {
 }
 
 .main-footer a {
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
 }
 
 .main-footer .main-logo-url {
-  color: rgba(255, 198, 0, 1);
+  color: #ffc600;
 }
 
 .main-footer .main-logo-url:hover,
@@ -504,9 +517,10 @@ h3 {
 }
 
 .footer-navigation {
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -525,7 +539,7 @@ h3 {
 
 .footer-secondary-navigation a:hover,
 .footer-secondary-navigation a:focus {
-  color: rgba(255, 255, 255, 1);
+  color: #fff;
 }
 
 .footer-secondary-navigation a:active {
@@ -545,9 +559,10 @@ h3 {
 
 .feedback-form label {
   display: block;
-  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   color: #000;
 }
 
@@ -571,7 +586,7 @@ h3 {
 .feedback-form textarea:focus {
   border-color: #f7e296;
   background-color: #fff;
-  color: rgba(70, 70, 70, 1);
+  color: #464646;
 }
 
 .feedback-form input:invalid,
