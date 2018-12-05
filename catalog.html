@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс - Каталог товаров</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,12 +19,12 @@
         <li class="site-navigation-item">
           <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
           <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
-            <li class="site-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Моноподы для селфи</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Моноподы для селфи</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
           </ul>
         </li>
         <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
@@ -32,7 +35,7 @@
     <div class="secondary-navigation">
       <form class="search" role="search" action="#" method="get">
         <input type="search" class="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
-        <button type="submit">Искать</button>
+        <button class="search-btn" type="submit">Найти</button>
       </form>
       <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
         <li><a class="user-profile-url" href="#" role="menuitem">Валентин Петухов</a></li>
@@ -49,7 +52,7 @@
     <ul class="breadcrumbs" aria-label="Хлебные крошки" role="menubar">
       <li class="breadcrumb-item"><a href="index.html" role="menuitem">Главная</a></li>
       <li class="breadcrumb-item"><a href="all-products.html" role="menuitem">Каталог товаров</a></li>
-      <li class="breadcrumb-item breadcrumb-item--current" aria-current="page"><span class="visually-hidden">Текущий
+      <li class="breadcrumb-item breadcrumb-item-current" aria-current="page"><span class="visually-hidden">Текущий
           пункт:</span>Моноподы для селфи</li>
     </ul>
 
@@ -66,23 +69,23 @@
           <legend>Цвет</legend>
           <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
             <li role="option">
-              <input id="color-black" name="product-color" type="checkbox" value="black">
+              <input id="color-black" class="styled-checkbox" name="product-color" type="checkbox" value="black" checked>
               <label class="filter-title" for="color-black">Черный</label>
             </li>
             <li role="option">
-              <input id="color-white" name="product-color" type="checkbox" value="white">
+              <input id="color-white" class="styled-checkbox" name="product-color" type="checkbox" value="white">
               <label class="filter-title" for="color-white">Белый</label>
             </li>
             <li role="option">
-              <input id="color-blue" name="product-color" type="checkbox" value="blue">
+              <input id="color-blue" class="styled-checkbox" name="product-color" type="checkbox" value="blue" disabled>
               <label class="filter-title" for="color-blue">Синий</label>
             </li>
             <li role="option">
-              <input id="color-red" name="product-color" type="checkbox" value="red">
+              <input id="color-red" class="styled-checkbox" name="product-color" type="checkbox" value="red">
               <label class="filter-title" for="color-red">Красный</label>
             </li>
             <li role="option">
-              <input id="color-pink" name="product-color" type="checkbox" value="pink">
+              <input id="color-pink" class="styled-checkbox" name="product-color" type="checkbox" value="pink">
               <label class="filter-title" for="color-pink">Розовый</label>
             </li>
           </ul>
@@ -91,11 +94,11 @@
           <legend>Bluetooth</legend>
           <ul class="filter-list" aria-label="Поддержка Bluetooth" role="radiogroup">
             <li>
-              <input id="bluetooth-ready" name="bluetooth-availability" type="radio">
+              <input id="bluetooth-ready" class="styled-radio" name="bluetooth-availability" type="radio">
               <label class="filter-title" for="bluetooth-ready">Есть</label>
             </li>
             <li>
-              <input id="bluetooth-no" name="bluetooth-availability" type="radio">
+              <input id="bluetooth-no" class="styled-radio" name="bluetooth-availability" type="radio" checked>
               <label class="filter-title" for="bluetooth-no">Нет</label>
             </li>
           </ul>
@@ -109,7 +112,7 @@
       <div class="sorting-controls">
         <b class="sorting-title">Сортировка:</b>
         <ul class="sorting-params" aria-label="Сортировка списка товаров по критериям" role="menubar">
-          <li class="sorting-param sorting-param--current" aria-selected="true">
+          <li class="sorting-param sorting-param-current" aria-selected="true">
             <span class="visually-hidden">Текущий пункт:</span>
             <a role="menuitem">По цене</a>
           </li>
@@ -121,7 +124,7 @@
           </li>
         </ul>
         <ul class="order-params" aria-label="Сортировка списка товаров по порядку" role="menubar">
-          <li class="order-param order-param--current" aria-selected="true">
+          <li class="order-param order-param-current" aria-selected="true">
             <span class="visually-hidden">Текущий пункт:</span>
             <a role="menuitem">По возрастанию</a>
           </li>
@@ -182,7 +185,7 @@
             <button class="compare">Добавить к сравнению</button>
           </div>
         </li>
-        <li class="product-item product-item--new">
+        <li class="product-item product-item-new">
           <a class="product-url" href="product.html">
             <h3 class="product-title">
 
@@ -203,28 +206,30 @@
       </ul>
 
       <div class="pagination" role="menubar">
-        <a class="pagination-btn pagination-btn--back" role="menuitem">Назад</a>
+        <a class="pagination-btn pagination-btn-back" role="menuitem">Назад</a>
         <ul class="pagination-list" aria-label="Список страниц каталога">
-          <li class="pagination-item pagination-item--current" aria-current="page">
+          <li class="pagination-item pagination-item-current" aria-current="page">
             <span class="visually-hidden">Текущий пункт:</span>
             <a role="menuitem">1</a>
           </li>
           <li class="pagination-item"><a href="catalog-2.html" aria-label="Перейти к странице 2" role="menuitem">2</a></li>
           <li class="pagination-item"><a href="catalog-3.html" aria-label="Перейти к странице 3" role="menuitem">3</a></li>
         </ul>
-        <a class="pagination-btn pagination-btn--forward" href="catalog-2.html" role="menuitem">Вперед</a>
+        <a class="pagination-btn pagination-btn-forward" href="catalog-2.html" role="menuitem">Вперед</a>
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
-    <p class="footer-contacts">
+    <div class="org-contacts">
       <span class="main-logo">
         <a class="main-logo-url" href="index.html">Device</a>
       </span>
-      г. Москва, ул. Строителей, 15
-    </p>
-    <p class="footer-phone">
+      <address class="org-address">
+        г. Москва, ул. Строителей, 15
+      </address>
+    </div>
+    <p class="org-phone">
       <a href="tel:+7-495-495-95-95">Тел.: +7 (495) 495-95-95</a>
     </p>
     <ul class="footer-navigation" aria-label="Условия покупки" role="menubar">
@@ -234,17 +239,18 @@
     </ul>
     <div class="footer-social">
       <ul aria-label="Мы в соцсетях" role="menubar">
-        <li><a class="social-btn social-btn--vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
-        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
-        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
+        <li><a class="social-btn social-btn-vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
+        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
+        <li><a class="social-btn social-btn-inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
       <a class="powered-by" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
-    <div class="secondary-navigation">
+    <div class="footer-secondary-navigation">
       <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
-        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
+        <li><a class="user-profile-url" href="#" role="menuitem">Валентин Петухов</a></li>
+        <li><a class="logout-url" href="#" role="menuitem">Выйти</a></li>
       </ul>
       <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
         <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
@@ -268,8 +274,9 @@
         <label for="customer-message">Текст письма:</label>
         <textarea id="customer-message" name="customer-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="btn" type="submit">Отправить</button>
     </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-map" role="dialog" aria-modal="true">

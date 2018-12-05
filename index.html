@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Девайс</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,12 +19,12 @@
         <li class="site-navigation-item">
           <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
           <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
-            <li class="site-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
-            <li class="site-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
-            <li class="site-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
+            <li class="sub-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
+            <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
           </ul>
         </li>
         <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
@@ -32,7 +35,7 @@
     <div class="secondary-navigation">
       <form class="search" role="search" action="#" method="get">
         <input type="search" class="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
-        <button class="btn" type="submit">Искать</button>
+        <button class="search-btn" type="submit">Найти</button>
       </form>
       <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
         <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
@@ -135,7 +138,7 @@
         <li class="slider-navigation-item">
           <button>Предыдущий товар</button>
         </li>
-        <li class="slider-navigation-item slider-navigation-item--active" aria-selected="true">
+        <li class="slider-navigation-item slider-navigation-item-current" aria-selected="true">
           <button>Текущий товар</button>
         </li>
         <li class="slider-navigation-item">
@@ -189,7 +192,7 @@
     <div class="services">
       <h2 class="visually-hidden">Наши преимущества</h2>
       <ul class="tabs-list" role="tablist">
-        <li class="tab-title tab-title--current" role="presentation">
+        <li class="tab-title tab-title-current" role="presentation">
           <a id="delivery-tab" href="#delivery" role="tab" aria-controls="delivery" aria-selected="true">Доставка</a>
         </li>
         <li class="tab-title">
@@ -280,13 +283,15 @@
   </main>
 
   <footer class="main-footer">
-    <p class="footer-contacts">
+    <div class="org-contacts">
       <span class="main-logo">
         <a class="main-logo-url">Device</a>
       </span>
-      г. Москва, ул. Строителей, 15
-    </p>
-    <p class="footer-phone">
+      <address class="org-address">
+        г. Москва, ул. Строителей, 15
+      </address>
+    </div>
+    <p class="org-phone">
       <a href="tel:+7-495-495-95-95">Тел.: +7 (495) 495-95-95</a>
     </p>
     <ul class="footer-navigation" aria-label="Условия покупки" role="menubar">
@@ -296,15 +301,15 @@
     </ul>
     <div class="footer-social">
       <ul aria-label="Мы в соцсетях" role="menubar">
-        <li><a class="social-btn social-btn--vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
-        <li><a class="social-btn social-btn--fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
-        <li><a class="social-btn social-btn--inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
+        <li><a class="social-btn social-btn-vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
+        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
+        <li><a class="social-btn social-btn-inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
       <a class="powered-by" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
-    <div class="secondary-navigation">
+    <div class="footer-secondary-navigation">
       <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
         <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
       </ul>
@@ -330,8 +335,9 @@
         <label for="customer-message">Текст письма:</label>
         <textarea id="customer-message" name="customer-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="btn" type="submit">Отправить</button>
     </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-map" role="dialog" aria-modal="true">
