@@ -2,18 +2,18 @@
   font-family: "Gilroy Light";
   font-style: normal;
   font-weight: 400;
-  src: local('Gilroy Light'),
-    url('../fonts/gilroylight.woff2') format('woff2'),
-    url('../fonts/gilroylight.woff') format('woff');
+  src: local("Gilroy Light"),
+    url("../fonts/gilroylight.woff2") format("woff2"),
+    url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
   font-family: "Gilroy Bold";
   font-style: normal;
   font-weight: 700;
-  src: local('Gilroy Bold'),
-    url('../fonts/gilroyextrabold.woff2') format('woff2'),
-    url('../fonts/gilroyextrabold.woff') format('woff');
+  src: local("Gilroy Bold"),
+    url("../fonts/gilroyextrabold.woff2") format("woff2"),
+    url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
 body {
@@ -90,6 +90,7 @@ h3 {
   font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
+  color: #000;
 }
 
 /* header
@@ -224,6 +225,15 @@ h3 {
   background-color: #e5e5e5;
 }
 
+/* About
+- - - - - - - - - - - - - - - - - - - - */
+.about-us li {
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  color: #000;
+}
+
 /* Catalog page
 - - - - - - - - - - - - - - - - - - - - */
 .page-title {
@@ -276,6 +286,61 @@ h3 {
   line-height: 40px;
 }
 
+/* Custom form elements
+- - - - - - - - - - - - - - - - - - - - */
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.styled-checkbox + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: text-top;
+
+  width: 26px;
+  height: 23px;
+
+  margin-right: 14px;
+  background: url(../img/checkbox-off.svg) no-repeat;
+}
+
+.styled-checkbox:checked + label::before {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.styled-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.styled-radio + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.styled-radio + label::before {
+  content: "";
+  display: inline-block;
+  vertical-align: text-top;
+
+  width: 25px;
+  height: 25px;
+
+  margin-right: 14px;
+  background: url(../img/radio-off.svg) no-repeat;
+}
+
+.styled-radio:checked + label::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+
 /* Sorting
 - - - - - - - - - - - - - - - - - - - - */
 .sorting-controls {
@@ -290,6 +355,7 @@ h3 {
   line-height: 24px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  color: #000;
 }
 
 .sorting-param,
@@ -326,6 +392,45 @@ h3 {
   font-family: "Gilroy Light", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
+}
+
+.compare {
+  display: block;
+
+  font: inherit;
+  font-size: 13px;
+  line-height: 36px;
+  letter-spacing: 0.01em;
+
+  background: none;
+  color: #000;
+
+  border: none;
+  cursor: pointer;
+}
+
+.product-item-new {
+  position: relative;
+}
+
+.product-item-new::after {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  content: "New";
+  display: block;
+  padding: 15px 10px;
+
+  font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  border-radius: 50%;
+  border: 1px solid #d8d8d8;
+
+  color: rgba(0, 0, 0, 0.2);
 }
 
 /* Pagination
@@ -414,7 +519,7 @@ h3 {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-secondary-navigation a {
+.footer-secondary-navigation a:not(.logout-url) {
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -424,6 +529,10 @@ h3 {
 }
 
 .footer-secondary-navigation a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-secondary-navigation .logout-url {
   color: rgba(255, 255, 255, 0.3);
 }
 
@@ -439,6 +548,7 @@ h3 {
   font-family: "Gilroy Bold", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  color: #000;
 }
 
 .feedback-form input,

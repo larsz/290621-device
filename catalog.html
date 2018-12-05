@@ -69,23 +69,23 @@
           <legend>Цвет</legend>
           <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
             <li role="option">
-              <input id="color-black" name="product-color" type="checkbox" value="black">
+              <input id="color-black" class="styled-checkbox" name="product-color" type="checkbox" value="black" checked>
               <label class="filter-title" for="color-black">Черный</label>
             </li>
             <li role="option">
-              <input id="color-white" name="product-color" type="checkbox" value="white">
+              <input id="color-white" class="styled-checkbox" name="product-color" type="checkbox" value="white">
               <label class="filter-title" for="color-white">Белый</label>
             </li>
             <li role="option">
-              <input id="color-blue" name="product-color" type="checkbox" value="blue">
+              <input id="color-blue" class="styled-checkbox" name="product-color" type="checkbox" value="blue" disabled>
               <label class="filter-title" for="color-blue">Синий</label>
             </li>
             <li role="option">
-              <input id="color-red" name="product-color" type="checkbox" value="red">
+              <input id="color-red" class="styled-checkbox" name="product-color" type="checkbox" value="red">
               <label class="filter-title" for="color-red">Красный</label>
             </li>
             <li role="option">
-              <input id="color-pink" name="product-color" type="checkbox" value="pink">
+              <input id="color-pink" class="styled-checkbox" name="product-color" type="checkbox" value="pink">
               <label class="filter-title" for="color-pink">Розовый</label>
             </li>
           </ul>
@@ -94,11 +94,11 @@
           <legend>Bluetooth</legend>
           <ul class="filter-list" aria-label="Поддержка Bluetooth" role="radiogroup">
             <li>
-              <input id="bluetooth-ready" name="bluetooth-availability" type="radio">
+              <input id="bluetooth-ready" class="styled-radio" name="bluetooth-availability" type="radio">
               <label class="filter-title" for="bluetooth-ready">Есть</label>
             </li>
             <li>
-              <input id="bluetooth-no" name="bluetooth-availability" type="radio">
+              <input id="bluetooth-no" class="styled-radio" name="bluetooth-availability" type="radio" checked>
               <label class="filter-title" for="bluetooth-no">Нет</label>
             </li>
           </ul>
@@ -249,7 +249,8 @@
     </p>
     <div class="footer-secondary-navigation">
       <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
-        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
+        <li><a class="user-profile-url" href="#" role="menuitem">Валентин Петухов</a></li>
+        <li><a class="logout-url" href="#" role="menuitem">Выйти</a></li>
       </ul>
       <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
         <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
@@ -273,8 +274,9 @@
         <label for="customer-message">Текст письма:</label>
         <textarea id="customer-message" name="customer-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
       </p>
-      <button class="modal-close" type="button">Закрыть</button>
+      <button class="btn" type="submit">Отправить</button>
     </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
   <section class="modal modal-map" role="dialog" aria-modal="true">
