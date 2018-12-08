@@ -9,40 +9,42 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <span class="main-logo">
-      <a class="main-logo-url">Device</a>
-    </span>
-    <nav class="main-navigation">
-      <ul class="site-navigation" aria-label="Основное меню" role="menubar">
-        <li class="site-navigation-item">
-          <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
-          <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
-            <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
-            <li class="sub-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
-            <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
-            <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
-            <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
-            <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
-          </ul>
-        </li>
-        <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
-        <li class="site-navigation-item"><a href="#" role="menuitem">Гарантия</a></li>
-        <li class="site-navigation-item"><a href="#" role="menuitem">Контакты</a></li>
-      </ul>
-    </nav>
-    <div class="secondary-navigation">
-      <form class="search" role="search" action="#" method="get">
-        <input type="search" class="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
-        <button class="search-btn" type="submit">Найти</button>
-      </form>
-      <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
-        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
-      </ul>
-      <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
-        <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
-        <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
-      </ul>
+  <header class="main-header container">
+    <div class="main-header-wrapper">
+      <span class="main-logo">
+        <a class="main-logo-url">Device</a>
+      </span>
+      <div class="secondary-navigation">
+        <form class="search" role="search" action="#" method="get">
+          <input type="search" class="search" aria-label="Поиск по сайту" placeholder="Поиск по сайту">
+          <button class="search-btn" type="submit">Найти</button>
+        </form>
+        <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
+          <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
+        </ul>
+        <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
+          <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
+          <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
+        </ul>
+      </div>
+      <nav class="main-navigation">
+        <ul class="site-navigation" aria-label="Основное меню" role="menubar">
+          <li class="site-navigation-item">
+            <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
+            <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
+              <li class="sub-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
+          <li class="site-navigation-item"><a href="#" role="menuitem">Гарантия</a></li>
+          <li class="site-navigation-item"><a href="#" role="menuitem">Контакты</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <main class="container">
@@ -52,7 +54,7 @@
       <ul class="slider">
         <li class="slide">
           <div class="slide-image">
-            <img src="img/slide-1.png" width="384" height="486" alt="Любительская селфи-палка">
+            <img class="slide-image-thmb" src="img/slide-1.png" width="384" height="486" alt="Любительская селфи-палка">
           </div>
           <div class="slide-description">
             <b class="slide-title">Делай селфи, как Бен Стиллер!</b>
@@ -80,9 +82,9 @@
           </div>
         </li>
 
-        <li class="slide">
+        <li class="slide slide-hidden">
           <div class="slide-image">
-            <img src="img/slide-2.png" width="345" height="485" alt="Фитнес-браслет">
+            <img class="slide-image-thmb" src="img/slide-2.png" width="345" height="485" alt="Фитнес-браслет">
           </div>
           <div class="slide-description">
             <b class="slide-title">Худеем правильно!</b>
@@ -105,9 +107,9 @@
           </div>
         </li>
 
-        <li class="slide">
+        <li class="slide slide-hidden">
           <div class="slide-image">
-            <img src="img/slide-3.png" width="526" height="334" alt="Квадрокоптер">
+            <img class="slide-image-thmb" src="img/slide-3.png" width="526" height="334" alt="Квадрокоптер">
           </div>
           <div class="slide-description">
             <b class="slide-title">Порхает как бабочка, жалит как пчела!</b>
@@ -282,40 +284,42 @@
   </main>
 
   <footer class="main-footer">
-    <div class="org-contacts">
-      <span class="main-logo">
-        <a class="main-logo-url">Device</a>
-      </span>
-      <address class="org-address">
-        г. Москва, ул. Строителей, 15
-      </address>
-    </div>
-    <p class="org-phone">
-      <a href="tel:+7-495-495-95-95">Тел.: +7 (495) 495-95-95</a>
-    </p>
-    <ul class="footer-navigation" aria-label="Условия покупки" role="menubar">
-      <li><a href="#" role="menuitem">Доставка</a></li>
-      <li><a href="#" role="menuitem">Гарантия</a></li>
-      <li><a href="#" role="menuitem">Контакты</a></li>
-    </ul>
-    <div class="footer-social">
-      <ul aria-label="Мы в соцсетях" role="menubar">
-        <li><a class="social-btn social-btn-vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
-        <li><a class="social-btn social-btn-fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
-        <li><a class="social-btn social-btn-inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
+    <div class="container">
+      <div class="org-contacts">
+        <span class="main-logo">
+          <a class="main-logo-url">Device</a>
+        </span>
+        <address class="org-address">
+          г. Москва, ул. Строителей, 15
+        </address>
+      </div>
+      <p class="org-phone">
+        <a href="tel:+7-495-495-95-95">Тел.: +7 (495) 495-95-95</a>
+      </p>
+      <ul class="footer-navigation" aria-label="Условия покупки" role="menubar">
+        <li><a href="#" role="menuitem">Доставка</a></li>
+        <li><a href="#" role="menuitem">Гарантия</a></li>
+        <li><a href="#" role="menuitem">Контакты</a></li>
       </ul>
-    </div>
-    <p class="footer-copyright">
-      <a class="powered-by" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-    </p>
-    <div class="footer-secondary-navigation">
-      <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
-        <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
-      </ul>
-      <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
-        <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
-        <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
-      </ul>
+      <div class="footer-social">
+        <ul aria-label="Мы в соцсетях" role="menubar">
+          <li><a class="social-btn social-btn-vk" href="https://vk.com/" role="menuitem">Вконтакте</a></li>
+          <li><a class="social-btn social-btn-fb" href="https://www.facebook.com/" role="menuitem">Фейсбук</a></li>
+          <li><a class="social-btn social-btn-inst" href="https://www.instagram.com/" role="menuitem">Инстаграм</a></li>
+        </ul>
+      </div>
+      <p class="footer-copyright">
+        <a class="powered-by" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+      </p>
+      <div class="footer-secondary-navigation">
+        <ul class="user-navigation" aria-label="Пользовательское меню" role="menubar">
+          <li><a class="login-url" href="#" role="menuitem">Войти</a></li>
+        </ul>
+        <ul class="shopping-navigation" aria-label="Меню покупок" role="menubar">
+          <li><a class="compare-url" href="#" role="menuitem">Сравнить</a></li>
+          <li><a class="cart-url" href="#" role="menuitem">Корзина</a></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
