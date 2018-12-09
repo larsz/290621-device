@@ -127,7 +127,8 @@ h3 {
   padding: 0 20px;
 }
 
-.columns {
+.columns,
+.catalog-columns {
   display: flex;
   justify-content: space-between;
 }
@@ -137,7 +138,7 @@ h3 {
 - - - - - - - - - - - - - - - - - - - - */
 .main-header-wrapper {
   position: relative;
-  padding: 45px 60px 0;
+  padding: 45px 60px 49px;
   background-color: #f7e296;
 }
 
@@ -161,8 +162,8 @@ h3 {
 
 .main-header .main-logo {
   position: absolute;
-  top: -24px;
-  left: 59px;
+  top: -22px;
+  left: 58px;
 }
 
 /* main nav
@@ -213,12 +214,12 @@ h3 {
 - - - - - - - - - - - - - - - - - - - - */
 .secondary-navigation {
   display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .search {
-  width: 300px;
+  display: flex;
+  width: 440px;
 }
 
 .search input {
@@ -254,6 +255,22 @@ h3 {
 .search-btn:active {
   background-color: #000;
   color: rgba(255, 255, 255, 0.3);
+}
+
+/* User navigation
+- - - - - - - - - - - - - - - - - - - - */
+.user-navigation {
+  display: flex;
+  width: 280px;
+  margin-left: auto;
+}
+
+.user-navigation li {
+  margin-right: 20px;
+}
+
+.user-navigation li:last-child {
+  margin-right: 0;
 }
 
 /* Shopping navigation
@@ -497,12 +514,31 @@ h3 {
 
 /* Catalog page
 - - - - - - - - - - - - - - - - - - - - */
+.page-navitation {
+  padding: 37px 60px;
+}
+
 .page-title {
+  margin: 0 0 20px;
+  padding: 0;
+
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 700;
   color: #000;
+}
+
+.breadcrumbs {
+  display: flex;
+}
+
+.breadcrumb-item {
+  margin-right: 20px;
+}
+
+.breadcrumb-item:last-child {
+  margin-right: 0;
 }
 
 .breadcrumb-item a,
@@ -519,9 +555,20 @@ h3 {
   color: rgba(0, 0, 0, 0.1);
 }
 
+
+.catalog-wrapper {
+  background-color: #efefef;
+}
+
+.catalog-columns {
+  background-color: #fff;
+}
+
 /* Filters
 - - - - - - - - - - - - - - - - - - - - */
 .filters {
+  width: 200px;
+  padding: 0 70px 0 60px;
   background-color: #efefef;
 }
 
@@ -644,8 +691,29 @@ h3 {
   color: #000;
 }
 
+/* Catalog
+- - - - - - - - - - - - - - - - - - - - */
+.catalog {
+  width: 760px;
+  background-color: #fff;
+}
+
 /* Products
 - - - - - - - - - - - - - - - - - - - - */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-item {
+  width: 360px;
+  margin-right: 40px;
+}
+
+.product-item:nth-child(2n) {
+  margin-right: 0;
+}
+
 .product-title {
   font-size: 18px;
   line-height: 24px;
@@ -702,6 +770,9 @@ h3 {
 /* Pagination
 - - - - - - - - - - - - - - - - - - - - */
 .pagination {
+  display: flex;
+  justify-content: space-between;
+
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -721,6 +792,18 @@ h3 {
   background-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.3);
 
+}
+
+.pagination-list {
+  display: flex;
+}
+
+.pagination-item {
+  margin-right: 20px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
 }
 
 .pagination-item a {
@@ -791,7 +874,7 @@ h3 {
 }
 
 .main-footer .user-navigation {
-  margin-left: auto;
+  width: auto;
 }
 
 .footer-navigation {
@@ -821,21 +904,35 @@ h3 {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-secondary-navigation a:not(.logout-url) {
+.main-footer .user-profile-url,
+.main-footer .compare-url,
+.main-footer .cart-url {
   color: rgba(255, 255, 255, 0.7);
 }
 
-.footer-secondary-navigation a:hover,
-.footer-secondary-navigation a:focus {
+.main-footer .user-profile-url:hover,
+.main-footer .compare-url:hover,
+.main-footer .cart-url:hover,
+.main-footer .user-profile-url:focus,
+.main-footer .compare-url:focus,
+.main-footer .cart-url:focus {
   color: #fff;
 }
 
-.footer-secondary-navigation a:active {
+.main-footer .user-profile-url:active,
+.main-footer .compare-url:active,
+.main-footer .cart-url:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.footer-secondary-navigation .logout-url {
+.main-footer .logout-url,
+.main-footer .logout-url:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.main-footer .logout-url:hover,
+.main-footer .logout-url:focus {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-copyright {
