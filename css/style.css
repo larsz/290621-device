@@ -730,22 +730,28 @@ h3 {
   margin-right: 20px;
 }
 
-.sorting-param:not(.sorting-param-current) a,
-.order-param:not(.order-param-current) a {
+.sorting-param a[href] {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.sorting-param:not(.sorting-param-current) a:hover,
-.sorting-param:not(.sorting-param-current) a:focus,
-.order-param:not(.order-param-current) a:hover,
-.order-param:not(.order-param-current) a:focus {
+.sorting-param a[href]:hover,
+.sorting-param a[href]:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.sorting-param:not(.sorting-param-current) a:active,
-.order-param:not(.order-param-current) a:active {
+.sorting-param a[href]:active {
   color: #000;
 }
+
+.order-param-url[href]:hover .order-arrow,
+.order-param-url[href]:focus .order-arrow {
+  fill-opacity: 0.4;
+}
+
+.order-param-url[href]:active .order-arrow {
+  fill-opacity: 1;
+}
+
 
 /* Catalog
 - - - - - - - - - - - - - - - - - - - - */
@@ -1007,48 +1013,44 @@ h3 {
   width: 513px;
 }
 
+/* Social buttons
+- - - - - - - - - - - - - - - - - - - - */
 .footer-social ul {
   display: flex;
 }
 
-.footer-social li {
+.footer-social li:not(:last-child) {
   margin-right: 20px;
 }
 
-.footer-social li:last-child {
-  margin-right: 0;
-}
-
-/* Social buttons
-- - - - - - - - - - - - - - - - - - - - */
 .social-btn {
   display: block;
   width: 32px;
   height: 32px;
 }
 
-.social-btn-fb {
-  background: url(../img/fb.svg) no-repeat;
-  background-size: 32px 32px;
+.social-btn:hover .social-btn-icon,
+.social-btn:focus .social-btn-icon {
+  fill-opacity: 0.6;
 }
 
-.social-btn-inst {
-  background: url(../img/instagram.svg) no-repeat;
-  background-size: 32px 32px;
-}
-
-.social-btn-tw {
-  background: url(../img/twitter.svg) no-repeat;
-  background-size: 32px 32px;
+.social-btn:active .social-btn-icon {
+  fill-opacity: 0.1;
 }
 
 .powered-by {
   display: block;
   width: 27px;
-  height: 37px;
+  height: 34px;
+}
 
-  background: url(../img/logo-html.svg) no-repeat;
-  background-size: 27px 37px;
+.powered-by:hover .ha-icon,
+.powered-by:focus .ha-icon {
+  fill-opacity: 0.6;
+}
+
+.powered-by:active .ha-icon {
+  fill-opacity: 0.3;
 }
 
 
