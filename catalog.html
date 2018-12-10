@@ -34,11 +34,11 @@
             <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
             <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
               <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Моноподы для селфи</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
               <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
               <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
+              <li class="sub-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+              <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
             </ul>
           </li>
           <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
@@ -65,16 +65,16 @@
       <div class="container">
         <div class="catalog-columns">
           <section class="filters">
-            <h2>Фильтр:</h2>
-            <form action="#" method="get">
+            <h2 class="filters-title">Фильтр:</h2>
+            <form class="filters-form" action="#" method="get">
               <fieldset class="filter">
-                <legend>Стоимость</legend>
+                <legend class="filter-legend">Стоимость</legend>
                 <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500">
                 <button id="min-price-control" type="button">Уменьшить цену</button>
                 <button id="max-price-control" type="button">Увеличить цену</button>
               </fieldset>
               <fieldset class="filter">
-                <legend>Цвет</legend>
+                <legend class="filter-legend">Цвет</legend>
                 <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
                   <li role="option">
                     <input id="color-black" class="styled-checkbox" name="product-color" type="checkbox" value="black"
@@ -101,7 +101,7 @@
                 </ul>
               </fieldset>
               <fieldset class="filter">
-                <legend>Bluetooth</legend>
+                <legend class="filter-legend">Bluetooth</legend>
                 <ul class="filter-list" aria-label="Поддержка Bluetooth" role="radiogroup">
                   <li>
                     <input id="bluetooth-ready" class="styled-radio" name="bluetooth-availability" type="radio">
