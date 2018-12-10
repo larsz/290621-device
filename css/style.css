@@ -52,12 +52,12 @@ a {
   text-decoration: none;
 }
 
-a:hover,
-a:focus {
+a[href]:hover,
+a[href]:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-a:active {
+a[href]:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -848,12 +848,12 @@ h3 {
   padding: 30px;
 }
 
-.pagination-btn:hover,
-.pagination-btn:focus {
+.pagination-btn[href]:hover,
+.pagination-btn[href]:focus {
   background-color: #d9d9d9;
 }
 
-.pagination-btn:active {
+.pagination-btn[href]:active {
   background-color: #d9d9d9;
   color: rgba(0, 0, 0, 0.3);
 }
