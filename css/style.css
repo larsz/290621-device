@@ -142,7 +142,7 @@ h3 {
 - - - - - - - - - - - - - - - - - - - - */
 .main-header-wrapper {
   margin-top: 40px;
-  padding: 16px 60px 53px;
+  padding: 13px 60px 53px;
   background-color: #f7e296;
 }
 
@@ -168,7 +168,7 @@ h3 {
   display: inline-block;
   vertical-align: top;
 
-  margin-top: -40px;
+  margin-top: -37px;
   margin-left: -1px;
 }
 
@@ -202,6 +202,25 @@ h3 {
 
 .site-navigation-item:last-child {
   margin-left: auto;
+  margin-right: -3px;
+}
+
+.site-navigation-item:first-child > a {
+  position: relative;
+}
+
+.site-navigation-item:first-child > a::after {
+  position: absolute;
+  top: 0;
+  right: -29px;
+  content: "";
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background: url(../img/plus.svg) no-repeat 50% 50%;
+  background-size: 15px;
 }
 
 .sub-navigation {
@@ -241,7 +260,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 41px;
 }
 
 .search {
@@ -292,8 +311,9 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 280px;
+  width: 250px;
   margin-left: auto;
+  letter-spacing: -0.15px;
 }
 
 .user-navigation li {
@@ -302,6 +322,24 @@ h3 {
 
 .user-navigation li:last-child {
   margin-right: 0;
+}
+
+.login-url {
+  position: relative;
+}
+
+.login-url::before {
+  position: absolute;
+  top: 4px;
+  left: -26px;
+  content: "";
+
+  display: block;
+  width: 14px;
+  height: 14px;
+
+  background: url(../img/user.svg) no-repeat;
+  background-size: 14px;
 }
 
 /* Shopping navigation
@@ -314,6 +352,7 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   text-align: right;
+  letter-spacing: -0.28px;
 }
 
 .shopping-navigation li:first-child {
@@ -321,7 +360,40 @@ h3 {
 }
 
 .shopping-navigation li:last-child {
-  width: 123px;
+  width: 124px;
+}
+
+.compare-url,
+.cart-url {
+  position: relative;
+}
+
+.compare-url::before {
+  position: absolute;
+  top: 7px;
+  left: -20px;
+  content: "";
+
+  display: block;
+  width: 10px;
+  height: 10px;
+
+  background: url(../img/compare.svg) no-repeat;
+  background-size: 10px;
+}
+
+.cart-url::before {
+  position: absolute;
+  top: 4px;
+  left: -23px;
+  content: "";
+
+  display: block;
+  width: 13px;
+  height: 13px;
+
+  background: url(../img/cart.svg) no-repeat;
+  background-size: 13px;
 }
 
 /* Bestsellers slider
@@ -1032,13 +1104,10 @@ h3 {
   width: auto;
   margin-top: -12px;
   margin-right: 31px;
-
-  letter-spacing: -0.15px;
 }
 
 .main-footer .shopping-navigation {
   margin-top: -12px;
-  letter-spacing: -0.28px;
 }
 
 .footer-navigation {
