@@ -311,7 +311,7 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 250px;
+  width: 275px;
   margin-left: auto;
   letter-spacing: -0.15px;
 }
@@ -324,22 +324,10 @@ h3 {
   margin-right: 0;
 }
 
-.login-url {
-  position: relative;
-}
-
-.login-url::before {
-  position: absolute;
-  top: 4px;
-  left: -26px;
-  content: "";
-
-  display: block;
-  width: 14px;
-  height: 14px;
-
-  background: url(../img/user.svg) no-repeat;
-  background-size: 14px;
+.navigation-icon {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
 }
 
 /* Shopping navigation
@@ -363,37 +351,8 @@ h3 {
   width: 124px;
 }
 
-.compare-url,
-.cart-url {
-  position: relative;
-}
-
-.compare-url::before {
-  position: absolute;
-  top: 7px;
-  left: -20px;
-  content: "";
-
-  display: block;
-  width: 10px;
-  height: 10px;
-
-  background: url(../img/compare.svg) no-repeat;
-  background-size: 10px;
-}
-
-.cart-url::before {
-  position: absolute;
-  top: 4px;
-  left: -23px;
-  content: "";
-
-  display: block;
-  width: 13px;
-  height: 13px;
-
-  background: url(../img/cart.svg) no-repeat;
-  background-size: 13px;
+.cart-url .navigation-icon {
+  margin-right: 7px;
 }
 
 /* Bestsellers slider
@@ -1057,7 +1016,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 22px 0;
+  padding: 21px 0;
 }
 
 .footer-navigation-wrapper:first-child {
@@ -1065,11 +1024,26 @@ h3 {
 }
 
 .footer-navigation-wrapper:last-child {
+  position: relative;
+
   width: 50%;
   margin-left: 50%;
 
   padding-top: 25px;
   padding-bottom: 0;
+}
+
+.footer-navigation-wrapper:last-child::before {
+  position: absolute;
+  content: "";
+
+  top: 61%;
+  left: -100%;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #ffc600;
 }
 
 .main-footer a {
@@ -1118,7 +1092,7 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 
-  padding-top: 7px;
+  padding-top: 8px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
