@@ -330,6 +330,16 @@ h3 {
   margin-right: 8px;
 }
 
+a:hover .navigation-icon,
+a:focus .navigation-icon {
+  fill-opacity: 0.6;
+}
+
+a:active .navigation-icon {
+  fill-opacity: 0.3;
+}
+
+
 /* Shopping navigation
 - - - - - - - - - - - - - - - - - - - - */
 .shopping-navigation {
@@ -751,8 +761,32 @@ h3 {
   background: url(../img/checkbox-off.svg) no-repeat;
 }
 
+.styled-checkbox:hover + label::before {
+  opacity: 0.6;
+}
+
+.styled-checkbox:active:not(:disabled) + label::before {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+/* Disabled state */
+.styled-checkbox:disabled + label {
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.styled-checkbox:disabled + label::before {
+  opacity: 0.25;
+}
+
+/* Checked state */
 .styled-checkbox:checked + label::before {
   background-image: url(../img/checkbox-on.svg);
+}
+
+.styled-checkbox:checked:active:not(:disabled) + label::before {
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 1;
 }
 
 .styled-radio {
@@ -777,8 +811,32 @@ h3 {
   background: url(../img/radio-off.svg) no-repeat;
 }
 
+.styled-radio:hover + label::before {
+  opacity: 0.6;
+}
+
+.styled-radio:active:not(:disabled) + label::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+/* Disabled state */
+.styled-radio:disabled + label {
+  color: #a6a6a6;
+  cursor: default;
+}
+
+.styled-radio:disabled + label::before {
+  opacity: 0.25;
+}
+
+/* Checked state */
 .styled-radio:checked + label::before {
   background-image: url(../img/radio-on.svg);
+}
+
+.styled-radio:checked:active:not(:disabled) + label::before {
+  background: url(../img/radio-off.svg) no-repeat;
+  opacity: 1;
 }
 
 
@@ -1074,6 +1132,13 @@ h3 {
   letter-spacing: -0.18px;
 }
 
+.org-phone a,
+.org-phone a:hover,
+.org-phone a:focus,
+.org-phone a:active {
+  color: #fff;
+}
+
 .main-footer .user-navigation {
   width: auto;
   margin-top: -12px;
@@ -1121,21 +1186,25 @@ h3 {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.main-footer .login-url,
 .main-footer .user-profile-url,
 .main-footer .compare-url,
 .main-footer .cart-url {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.main-footer .login-url:hover,
 .main-footer .user-profile-url:hover,
 .main-footer .compare-url:hover,
 .main-footer .cart-url:hover,
+.main-footer .login-url:focus,
 .main-footer .user-profile-url:focus,
 .main-footer .compare-url:focus,
 .main-footer .cart-url:focus {
   color: #fff;
 }
 
+.main-footer .login-url:active,
 .main-footer .user-profile-url:active,
 .main-footer .compare-url:active,
 .main-footer .cart-url:active {
