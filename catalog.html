@@ -60,14 +60,16 @@
         <ul class="site-navigation" aria-label="Основное меню" role="menubar">
           <li class="site-navigation-item">
             <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
-            <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
-              <li class="sub-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
-              <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
-            </ul>
+            <div class="sub-navigation-wrapper">
+              <ul class="sub-navigation" role="menu" aria-label="Товарные категории">
+                <li class="sub-navigation-item"><a href="#" role="menuitem">Виртуальная реальность</a></li>
+                <li class="sub-navigation-item"><a href="#" role="menuitem">Фитнес-браслеты</a></li>
+                <li class="sub-navigation-item"><a href="#" role="menuitem">Квадрокоптеры</a></li>
+                <li class="sub-navigation-item"><a href="catalog.html" role="menuitem">Моноподы для селфи</a></li>
+                <li class="sub-navigation-item"><a href="#" role="menuitem">Умные часы</a></li>
+                <li class="sub-navigation-item"><a href="#" role="menuitem">Экшн-камеры</a></li>
+              </ul>
+            </div>
           </li>
           <li class="site-navigation-item"><a href="#" role="menuitem">Доставка</a></li>
           <li class="site-navigation-item"><a href="#" role="menuitem">Гарантия</a></li>
@@ -119,7 +121,8 @@
                     <label class="filter-title" for="color-blue">Синий</label>
                   </li>
                   <li role="option">
-                    <input id="color-red" class="styled-checkbox" name="product-color" type="checkbox" value="red" disabled checked>
+                    <input id="color-red" class="styled-checkbox" name="product-color" type="checkbox" value="red"
+                      disabled checked>
                     <label class="filter-title" for="color-red">Красный</label>
                   </li>
                   <li role="option">
@@ -144,7 +147,8 @@
                     <label class="filter-title" for="bluetooth-no2">Нет</label>
                   </li>
                   <li>
-                    <input id="bluetooth-no3" class="styled-radio" name="bluetooth-availability1" type="radio" disabled checked>
+                    <input id="bluetooth-no3" class="styled-radio" name="bluetooth-availability1" type="radio" disabled
+                      checked>
                     <label class="filter-title" for="bluetooth-no3">Нет</label>
                   </li>
                 </ul>

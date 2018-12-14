@@ -142,7 +142,7 @@ h3 {
 - - - - - - - - - - - - - - - - - - - - */
 .main-header-wrapper {
   margin-top: 40px;
-  padding: 13px 60px 53px;
+  padding-top: 13px;
   background-color: #f7e296;
 }
 
@@ -169,15 +169,22 @@ h3 {
   vertical-align: top;
 
   margin-top: -37px;
-  margin-left: -1px;
+  margin-left: 59px;
 }
 
 /* main nav
 - - - - - - - - - - - - - - - - - - - - */
+.main-navigation {
+  position: relative;
+  padding: 0 60px 51px;
+}
+
 .site-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -223,22 +230,42 @@ h3 {
   background-size: 15px;
 }
 
+.site-navigation-item:first-child > a:focus + .sub-navigation-wrapper,
+.sub-navigation-wrapper:focus-within,
+.site-navigation-item:first-child:hover .sub-navigation-wrapper {
+  opacity: 1;
+}
+
+.sub-navigation-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  opacity: 0;
+
+  padding: 20px 60px 33px;
+  background-color: #f7e296;
+}
+
 .sub-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
   width: 640px;
 }
 
 .sub-navigation-item {
-  width: 200px;
+  width: 199px;
 
   font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 15px;
+  font-weight: initial;
   line-height: 36px;
-  letter-spacing: 0.15px;
+  letter-spacing: -0.2px;
   text-transform: initial;
 }
 
@@ -260,7 +287,10 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   margin-bottom: 41px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .search {
@@ -372,11 +402,48 @@ a:active .navigation-icon {
   margin-bottom: 90px;
 }
 
+.bestsellers::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  content: '';
+
+  height: 110px;
+
+  background-color: #f7e296;
+}
+
+.bestsellers .slider {
+  position: relative;
+}
+
+.bestsellers .slide-description {
+  position: relative;
+  padding-top: 79px;
+}
+
+.bestsellers .slide-description::before {
+  position: absolute;
+  content: "";
+
+  top: 36px;
+  left: 0;
+
+  width: 101px;
+  height: 8px;
+
+  background-color: #fff;
+}
+
 .bestsellers .slide-title {
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
   line-height: 56px;
   font-weight: 700;
+  letter-spacing: 0.7px;
+
   color: #000;
 }
 
@@ -406,7 +473,10 @@ a:active .navigation-icon {
           justify-content: space-between;
 }
 
-.slide-image,
+.slide-image {
+  width: 562px;
+}
+
 .slide-description {
   width: 560px;
 }
