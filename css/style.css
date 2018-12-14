@@ -769,6 +769,15 @@ a:active .navigation-icon {
   background-image: url(../img/checkbox-on.svg);
 }
 
+/* Checked state */
+.styled-checkbox:checked + label::before {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.styled-checkbox:checked:active + label::before {
+  background-image: url(../img/checkbox-off.svg);
+}
+
 /* Disabled state */
 .styled-checkbox:disabled + label {
   color: #a6a6a6;
@@ -779,14 +788,8 @@ a:active .navigation-icon {
   opacity: 0.25;
 }
 
-/* Checked state */
-.styled-checkbox:checked + label::before {
+.styled-checkbox:disabled:checked:active + label::before {
   background-image: url(../img/checkbox-on.svg);
-}
-
-.styled-checkbox:checked:active:not(:disabled) + label::before {
-  background-image: url(../img/checkbox-off.svg);
-  opacity: 1;
 }
 
 .styled-radio {
@@ -819,6 +822,15 @@ a:active .navigation-icon {
   background-image: url(../img/radio-on.svg);
 }
 
+/* Checked state */
+.styled-radio:checked + label::before {
+  background-image: url(../img/radio-on.svg);
+}
+
+.styled-radio:checked:active + label::before {
+  background: url(../img/radio-off.svg) no-repeat;
+}
+
 /* Disabled state */
 .styled-radio:disabled + label {
   color: #a6a6a6;
@@ -829,14 +841,8 @@ a:active .navigation-icon {
   opacity: 0.25;
 }
 
-/* Checked state */
-.styled-radio:checked + label::before {
+.styled-radio:disabled:checked:active + label::before {
   background-image: url(../img/radio-on.svg);
-}
-
-.styled-radio:checked:active:not(:disabled) + label::before {
-  background: url(../img/radio-off.svg) no-repeat;
-  opacity: 1;
 }
 
 
