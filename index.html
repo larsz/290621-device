@@ -89,7 +89,8 @@
             </div>
             <div class="slide-description">
               <b class="slide-title">Делай селфи, <br>как Бен Стиллер!</b>
-              <p class="slide-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом
+              <p class="slide-text">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!)
+                метров длиной и весом
                 всего 5 килограмм.</p>
               <a class="btn" href="product.html">Подробнее</a>
 
@@ -97,16 +98,16 @@
                 <caption class="visually-hidden">Технические характеристики</caption>
                 <thead>
                   <tr>
-                    <th scope="col">Длина палки</th>
-                    <th scope="col">Вес палки</th>
-                    <th scope="col">Материал</th>
+                    <th class="featured-product-param" scope="col">Длина палки</th>
+                    <th class="featured-product-param" scope="col">Вес палки</th>
+                    <th class="featured-product-param" scope="col">Материал</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>8,5 м</td>
-                    <td>5 кг</td>
-                    <td>Карбон</td>
+                    <td class="featured-product-param-value">8,5 м</td>
+                    <td class="featured-product-param-value">5 кг</td>
+                    <td class="featured-product-param-value">Карбон</td>
                   </tr>
                 </tbody>
               </table>
@@ -125,12 +126,12 @@
                 <caption class="visually-hidden">Технические характеристики</caption>
                 <thead>
                   <tr>
-                    <th scope="col">Без подзарядки</th>
+                    <th class="featured-product-param" scope="col">Без подзарядки</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>48 часов</td>
+                    <td class="featured-product-param-value">48 часов</td>
                   </tr>
                 </tbody>
               </table>
@@ -150,14 +151,14 @@
                 <caption class="visually-hidden">Технические характеристики</caption>
                 <thead>
                   <tr>
-                    <th scope="col">Дальность полета</th>
-                    <th scope="col">Радиус поражения</th>
+                    <th class="featured-product-param" scope="col">Дальность полета</th>
+                    <th class="featured-product-param" scope="col">Радиус поражения</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>800 м</td>
-                    <td>50 м</td>
+                    <td class="featured-product-param-value">800 м</td>
+                    <td class="featured-product-param-value">50 м</td>
                   </tr>
                 </tbody>
               </table>
@@ -238,45 +239,41 @@
         <h2 class="visually-hidden">Наши преимущества</h2>
         <div class="services-wrapper">
           <ul class="tabs-list" role="tablist">
-            <li class="tab-title tab-title-current" role="presentation">
+            <li class="tab-title " role="presentation">
               <a id="delivery-tab" class="tab-title-url" href="#delivery" role="tab" aria-controls="delivery"
                 aria-selected="true">Доставка</a>
             </li>
             <li class="tab-title">
               <a id="warranty-tab" class="tab-title-url" href="#warranty" role="tab" aria-controls="warranty">Гарантия</a>
             </li>
-            <li class="tab-title">
+            <li class="tab-title tab-title-current">
               <a id="loan-tab" class="tab-title-url" href="#loan" role="tab" aria-controls="loan">Кредит</a>
             </li>
           </ul>
 
-          <section id="delivery" class="tab-panel" role="tabpanel" aria-labelledby="delivery-tab">
-            <h3>Доставка</h3>
-            <p>
+          <section id="delivery" class="tab-panel tab-panel-hidden delivery" role="tabpanel" aria-labelledby="delivery-tab">
+            <h3 class="service-title">Доставка</h3>
+            <p class="service-description">
               Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
               заработаем, поднимая его на ваш этаж.
             </p>
-            <img src="img/delivery.svg" alt="Доставка" width="136" height="164">
           </section>
 
-          <section id="warranty" class="tab-panel tab-panel-hidden" role="tabpanel" aria-labelledby="warranty-tab"
+          <section id="warranty" class="tab-panel tab-panel-hidden warranty" role="tabpanel" aria-labelledby="warranty-tab"
             aria-hidden="true">
-            <h3>Гарантия</h3>
-            <p>
+            <h3 class="service-title">Гарантия</h3>
+            <p class="service-description">
               Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-              Товар,
-              не дом, конечно же.
+              <br>Товар, не дом, конечно же.
             </p>
-            <img src="img/warranty.svg" alt="Гарантия" width="171" height="195">
           </section>
 
-          <section id="loan" class="tab-panel tab-panel-hidden" role="tabpanel" aria-labelledby="loan-tab" aria-hidden="true">
-            <h3>Кредит</h3>
-            <p>
-              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия
-              кредита. Выгодные для нашего банка, разумеется.
+          <section id="loan" class="tab-panel loan" role="tabpanel" aria-labelledby="loan-tab" aria-hidden="true">
+            <h3 class="service-title">Кредит</h3>
+            <p class="service-description">
+              Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+              условия&nbsp;кредита. Выгодные для нашего банка, разумеется.
             </p>
-            <img src="img/credit.svg" alt="Кредит" width="156" height="188">
           </section>
         </div>
       </div>
@@ -286,24 +283,24 @@
       <section class="featured-brands">
         <h2 class="visually-hidden">Популярные бренды</h2>
         <ul class="brands-list">
-          <li>
-            <a href="#">
-              <img src="img/logo-1.png" alt="Логотип «DJI»" width="260" height="100">
+          <li class="brand-item">
+            <a class="brand brand-dji" href="#">
+              <span class="visually-hidden">Каталог товаров «DJI»</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img src="img/logo-2.png" alt="Логотип «SP Gadgets»" width="260" height="100">
+          <li class="brand-item">
+            <a class="brand brand-spg" href="#">
+              <span class="visually-hidden">Каталог товаров «SP Gadgets»</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img src="img/logo-3.png" alt="Логотип «GoPro»" width="260" height="100">
+          <li class="brand-item">
+            <a class="brand brand-gopro" href="#">
+              <span class="visually-hidden">Каталог товаров «GoPro»</span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img src="img/logo-4.png" alt="Логотип «VIVE»" width="260" height="100">
+          <li class="brand-item">
+            <a class="brand brand-vive" href="#">
+              <span class="visually-hidden">Каталог товаров «VIVE»</span>
             </a>
           </li>
         </ul>
@@ -328,7 +325,7 @@
 
         <section class="contacts">
           <h2 class="contacts-title">Контакты</h2>
-          <p class="regular-text">Вы можете забрать товар сами, заехав к нам в офис. Заодно, вы сможете проверить
+          <p class="contacts-text">Вы можете забрать товар сами, заехав к нам в офис. Заодно, вы сможете проверить
             работоспособность покупки.</p>
           <a href="#"><img src="img/map.jpg" width="560" height="222" alt="Офис компании по адресу Москва, ул. Строителей, 15"></a>
           <a class="btn" href="#">Напишите нам</a>

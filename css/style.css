@@ -122,6 +122,7 @@ h3 {
 
 .regular-text {
   margin: 0 0 30px;
+  letter-spacing: -0.25px;
 }
 
 /* layout
@@ -293,7 +294,7 @@ h3 {
   display: -ms-flexbox;
   display: flex;
 
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   padding-left: 60px;
   padding-right: 60px;
 }
@@ -423,14 +424,31 @@ a:active .navigation-icon {
   position: relative;
 }
 
+.slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slide-image {
+  width: 565px;
+}
+
+.slide-image-thmb {
+  display: block;
+  margin-left:  auto;
+  margin-right:  auto;
+}
+
 .bestsellers .slide-description {
   position: relative;
   z-index: 1;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -439,8 +457,12 @@ a:active .navigation-icon {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
+  width: 500px;
+  margin-left: 33px;
+  margin-right: auto;
+
   padding-top: 79px;
-  padding-bottom: 7px;
+  padding-bottom: 6px;
 }
 
 .bestsellers .slide-description::before {
@@ -448,7 +470,7 @@ a:active .navigation-icon {
   content: "";
 
   top: 36px;
-  left: 0;
+  left: -3px;
 
   width: 101px;
   height: 8px;
@@ -458,8 +480,8 @@ a:active .navigation-icon {
 
 .slide-description::after {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: -13px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 179px;
@@ -494,7 +516,7 @@ a:active .navigation-icon {
 
 .slide-text {
   max-width: 490px;
-  margin: 18px 0 0 2px;
+  margin: 19px 0 0 2px;
   letter-spacing: -0.18px;
 }
 
@@ -507,54 +529,29 @@ a:active .navigation-icon {
   display: table-footer-group;
 }
 
-.featured-product-params th {
+.featured-product-param {
   padding: 5px 0 0;
 
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
-  letter-spacing: normal;
+  letter-spacing: 0.3px;
 }
 
-.featured-product-params th:first-child {
-  width: 157px;
+.featured-product-param:first-child {
+  width: 159px;
 }
-.featured-product-params th:nth-child(2) {
-  width: 138px;
+.featured-product-param:nth-child(2) {
+  width: 139px;
 }
 
-.featured-product-params td {
+.featured-product-param-value {
   padding: 0;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 36px;
   line-height: 48px;
   font-weight: 400;
-}
-
-.slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.slide-image {
-  width: 560px;
-}
-
-.slide-description {
-  width: 500px;
-  margin-left: 38px;
-  margin-right: auto;
-}
-
-.slide-image-thmb {
-  display: block;
-  margin-left:  auto;
-  margin-right:  auto;
 }
 
 .slide-hidden {
@@ -596,7 +593,7 @@ a:active .navigation-icon {
 /* Featured Categories
 - - - - - - - - - - - - - - - - - - - - */
 .featured-categories {
-  margin-bottom: 178px;
+  margin-bottom: 181px;
 }
 
 .featured-categories-list {
@@ -704,10 +701,22 @@ a:active .navigation-icon {
 }
 
 .tabs-list {
+  position: relative;
   width: 278px;
-  margin-top: -98px;
-  padding-top: 80px;
-  border-right: 7px solid #000;
+
+  margin-top: -19px;
+  padding-bottom: 42px;
+}
+
+.tabs-list::after {
+  position: absolute;
+  top: -81px;
+  bottom: 0;
+  right: -7px;
+  content: "";
+
+  width: 7px;
+  background-color: #000;
 }
 
 .tab-title {
@@ -740,37 +749,154 @@ a:active .navigation-icon {
   color: #f7e184;
 }
 
+.tab-panel-hidden {
+  display: none;
+}
+
 .tab-panel {
-  width: 780px;
+  position: relative;
+  width: 760px;
   background-color: #e5e5e5;
 }
 
-.tab-panel-hidden {
-  display: none;
+.tab-panel::after {
+  position: absolute;
+  content: "";
+}
+
+.delivery::after {
+  top: -15px;
+  right: 66px;
+
+  width: 136px;
+  height: 164px;
+
+  background: url(../img/delivery.svg) no-repeat;
+}
+
+.warranty::after {
+  top: -38px;
+  right: 46px;
+
+  width: 171px;
+  height: 195px;
+
+  background: url(../img/warranty.svg) no-repeat;
+}
+
+.loan::after {
+  top: -38px;
+  right: 69px;
+
+  width: 156px;
+  height: 188px;
+
+  background: url(../img/credit.svg) no-repeat;
+}
+
+.service-title {
+  margin: -27px 0 31px;
+  letter-spacing: 1.2px;
+}
+
+.service-description {
+  max-width: 460px;
+  margin: 0;
+  letter-spacing: normal;
 }
 
 /* Featured Brands
 - - - - - - - - - - - - - - - - - - - - */
 .featured-brands {
-  margin-bottom: 85px;
+  margin-bottom: 95px;
 }
 
 .brands-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.brand img {
+  display: none;
+}
+
+.brand-item {
+  width: 260px;
+  padding: 11px 0;
+}
+
+.brand-item:not(:nth-child(4n)) {
+  margin-right: 40px;
+}
+
+.brand {
+  display: block;
+  margin: 0 auto;
+  height: 78px;
+
+  background: url(../img/partners-logos.png) no-repeat -1000px -1000px;
+}
+
+.brand-dji {
+  width: 140px;
+  background-position: 0 0;
+}
+
+.brand-dji:hover {
+  background-position: 0 -78px;
+}
+
+.brand-spg {
+  width: 260px;
+  background-position: -140px 0;
+}
+
+.brand-spg:hover {
+  background-position: -140px -78px;
+}
+
+.brand-gopro {
+  width: 190px;
+  background-position: -405px 0;
+}
+
+.brand-gopro:hover {
+  background-position: -405px -78px;
+}
+
+.brand-vive {
+  width: 200px;
+  background-position: -610px 0;
+}
+
+.brand-vive:hover {
+  background-position: -610px -78px;
 }
 
 /* About
 - - - - - - - - - - - - - - - - - - - - */
 .about-us {
-  width: 495px;
-  min-height: 520px;
+  position: relative;
+  width: 480px;
   padding-top: 52px;
   letter-spacing: normal;
+}
+
+.about-us::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 0;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000;
 }
 
 .about-title {
@@ -788,13 +914,34 @@ a:active .navigation-icon {
 /* Contacts
 - - - - - - - - - - - - - - - - - - - - */
 .contacts {
-  width: 560px;
+  position: relative;
+
+  width: 562px;
   padding-top: 52px;
   letter-spacing: normal;
 }
 
+.contacts::before {
+  position: absolute;
+  content: "";
+
+  top: 0;
+  left: 2px;
+
+  width: 80px;
+  height: 7px;
+
+  background-color: #000;
+}
+
 .contacts-title {
   margin: 0 0 43px;
+  letter-spacing: 0.75px;
+}
+
+.contacts-text {
+  margin: 0 0 40px;
+  letter-spacing: -0.18px;
 }
 
 /* Catalog page
