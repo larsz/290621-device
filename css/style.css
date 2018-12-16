@@ -196,7 +196,7 @@ h3 {
 - - - - - - - - - - - - - - - - - - - - */
 .main-header-wrapper {
   margin-top: 40px;
-  padding-top: 13px;
+  padding-top: 4px;
   background-color: #f7e296;
 }
 
@@ -222,7 +222,7 @@ h3 {
   display: inline-block;
   vertical-align: top;
 
-  margin-top: -37px;
+  margin-top: -28px;
   margin-left: 59px;
 }
 
@@ -342,40 +342,75 @@ h3 {
   display: -ms-flexbox;
   display: flex;
 
-  margin-bottom: 40px;
+  align-items: center;
+
+  margin-bottom: 30px;
   padding-left: 60px;
   padding-right: 60px;
 }
 
 .search {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 440px;
 }
 
+.search-label {
+  position: absolute;
+  top: 17px;
+  left: 4px;
+  z-index: 1;
+
+  width: 16px;
+  height: 16px;
+  background: url(../img/search.svg) no-repeat;
+}
+
 .search input {
-  padding: 0 5px;
+  width: 350px;
+  height: 48px;
+
+  padding: 0 5px 0 38px;
+
   font: inherit;
-  letter-spacing: 0.15px;
+  letter-spacing: normal;
+
   background: none;
   color: rgba(0, 0, 0, 0.3);
+
+  outline: none;
   border: none;
+  border-bottom: 2px solid transparent;
 }
 
 .search input:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.search:focus-within input,
 .search input:focus {
+  border-bottom: 2px solid #000;
   color: #000;
 }
 
+.search:focus-within .search-btn {
+  opacity: 1;
+}
+
 .search-btn {
-  font: inherit;
+  width: 85px;
+  height: 48px;
+
   padding: 0;
-  border: none;
+  font: inherit;
+
+  opacity: 0;
+
   background: none;
+  border: 2px solid #000;
+  outline: none;
 }
 
 .search-btn:hover,
@@ -463,7 +498,7 @@ a:active .navigation-icon {
   right: 0;
 
   content: '';
-  height: 110px;
+  height: 112px;
 
   background-color: #f7e296;
 }
@@ -911,7 +946,8 @@ a:active .navigation-icon {
   background-position: 0 0;
 }
 
-.brand-dji:hover {
+.brand-dji:hover,
+.brand-dji:focus {
   background-position: 0 -78px;
 }
 
@@ -920,7 +956,8 @@ a:active .navigation-icon {
   background-position: -140px 0;
 }
 
-.brand-spg:hover {
+.brand-spg:hover,
+.brand-spg:focus {
   background-position: -140px -78px;
 }
 
@@ -929,7 +966,8 @@ a:active .navigation-icon {
   background-position: -405px 0;
 }
 
-.brand-gopro:hover {
+.brand-gopro:hover,
+.brand-gopro:focus {
   background-position: -405px -78px;
 }
 
@@ -938,7 +976,8 @@ a:active .navigation-icon {
   background-position: -610px 0;
 }
 
-.brand-vive:hover {
+.brand-vive:hover,
+.brand-vive:focus {
   background-position: -610px -78px;
 }
 
