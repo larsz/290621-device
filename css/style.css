@@ -1062,7 +1062,7 @@ a:active .navigation-icon {
 /* Catalog page
 - - - - - - - - - - - - - - - - - - - - */
 .page-navitation {
-  padding: 37px 60px;
+  padding: 37px 60px 44px;
 }
 
 .page-title {
@@ -1073,6 +1073,8 @@ a:active .navigation-icon {
   font-size: 47px;
   line-height: 48px;
   font-weight: 700;
+  letter-spacing: 0.6px;
+
   color: #000;
 }
 
@@ -1145,6 +1147,10 @@ a:active .navigation-icon {
   border: none;
 }
 
+.filter-bs {
+  margin-bottom: 30px;
+}
+
 .filter::before {
   position: absolute;
   top: -15px;
@@ -1167,9 +1173,17 @@ a:active .navigation-icon {
   color: #000;
 }
 
+.filter-list {
+  margin-top: 15px;
+}
+
 .filter-title {
   font-size: 14px;
   line-height: 40px;
+}
+
+.filter-btn {
+  width: 100%;
 }
 
 /* Custom form elements

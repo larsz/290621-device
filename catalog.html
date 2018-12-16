@@ -97,13 +97,13 @@
           <section class="filters">
             <h2 class="filters-title">Фильтр:</h2>
             <form class="filters-form" action="#" method="get">
-              <fieldset class="filter">
+              <fieldset class="filter filter-price">
                 <legend class="filter-legend">Стоимость</legend>
                 <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500">
                 <button id="min-price-control" type="button">Уменьшить цену</button>
                 <button id="max-price-control" type="button">Увеличить цену</button>
               </fieldset>
-              <fieldset class="filter">
+              <fieldset class="filter filter-color">
                 <legend class="filter-legend">Цвет</legend>
                 <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
                   <li role="option">
@@ -131,7 +131,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter">
+              <fieldset class="filter filter-bs">
                 <legend class="filter-legend">Bluetooth</legend>
                 <ul class="filter-list" aria-label="Поддержка Bluetooth" role="radiogroup">
                   <li>
@@ -153,7 +153,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="btn" type="submit">Показать</button>
+              <button class="btn filter-btn" type="submit">Показать</button>
             </form>
           </section>
           <section class="catalog">
