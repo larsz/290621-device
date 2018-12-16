@@ -86,7 +86,7 @@ img {
 .featured-categories-list,
 .tabs-list,
 .brands-list,
-.about-us ul,
+.delivery-partners,
 .footer-navigation,
 .footer-social ul,
 .breadcrumbs,
@@ -101,14 +101,52 @@ img {
 }
 
 .btn {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px;
+
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   letter-spacing: 3.6px;
   text-transform: uppercase;
-  background-color: #fff;
+
+  background: none;
   border: none;
+  cursor: pointer;
+}
+
+.btn::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  content: "";
+
+  display: block;
+  height: 8px;
+
+  background-color: #f0c52e;
+}
+
+.btn:hover::before {
+  height: 40px;
+  transition: height 0.3s ease-in-out;
+}
+
+.btn:focus::before {
+  height: 40px;
+  transition: height 0.3s ease-in-out;
+}
+
+.btn:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 h2,
@@ -405,7 +443,7 @@ a:active .navigation-icon {
 - - - - - - - - - - - - - - - - - - - - */
 .bestsellers {
   position: relative;
-  margin-bottom: 105px;
+  margin-bottom: 106px;
 }
 
 .bestsellers::before {
@@ -443,6 +481,10 @@ a:active .navigation-icon {
   margin-right:  auto;
 }
 
+.slide:nth-child(3) .slide-image {
+  margin-top: 60px;
+}
+
 .bestsellers .slide-description {
   position: relative;
   z-index: 1;
@@ -457,12 +499,11 @@ a:active .navigation-icon {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 
-  width: 500px;
+  width: 510px;
   margin-left: 33px;
   margin-right: auto;
 
   padding-top: 79px;
-  padding-bottom: 6px;
 }
 
 .bestsellers .slide-description::before {
@@ -470,7 +511,7 @@ a:active .navigation-icon {
   content: "";
 
   top: 36px;
-  left: -3px;
+  left: 0;
 
   width: 101px;
   height: 8px;
@@ -481,7 +522,7 @@ a:active .navigation-icon {
 .slide-description::after {
   position: absolute;
   top: 8px;
-  right: -13px;
+  right: -3px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 179px;
@@ -504,6 +545,9 @@ a:active .navigation-icon {
 }
 
 .bestsellers .slide-title {
+  position: relative;
+  z-index: 1;
+
   padding-left: 2px;
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
@@ -520,34 +564,36 @@ a:active .navigation-icon {
   letter-spacing: -0.18px;
 }
 
-.slide-description .btn,
-.featured-product-params {
-  margin-top: auto;
+.slide-btn {
+  width: 217px;
+  margin-top: 45px;
+  margin-bottom: 47px;
+  padding-left: 5px;
 }
 
 .featured-product-params thead {
   display: table-footer-group;
 }
 
-.featured-product-param {
-  padding: 5px 0 0;
+.featured-product-param,
+.featured-product-param-value {
+  padding: 0 20px 6px 0;
+}
 
+.featured-product-param:last-child,
+.featured-product-param-value:last-child {
+  padding-right: 0;
+}
+
+.featured-product-param {
+  text-align: left;
   font-size: 13px;
   line-height: 20px;
   font-weight: 300;
   letter-spacing: 0.3px;
 }
 
-.featured-product-param:first-child {
-  width: 159px;
-}
-.featured-product-param:nth-child(2) {
-  width: 139px;
-}
-
 .featured-product-param-value {
-  padding: 0;
-
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 36px;
   line-height: 48px;
@@ -560,17 +606,17 @@ a:active .navigation-icon {
 
 .slider-navigation {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 138px;
+  right: 81px;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+
+  align-items: center;
 
   width: 80px;
 }
@@ -593,7 +639,7 @@ a:active .navigation-icon {
 /* Featured Categories
 - - - - - - - - - - - - - - - - - - - - */
 .featured-categories {
-  margin-bottom: 181px;
+  margin-bottom: 180px;
 }
 
 .featured-categories-list {
@@ -705,7 +751,7 @@ a:active .navigation-icon {
   width: 278px;
 
   margin-top: -19px;
-  padding-bottom: 42px;
+  padding-bottom: 45px;
 }
 
 .tabs-list::after {
@@ -720,8 +766,7 @@ a:active .navigation-icon {
 }
 
 .tab-title {
-  margin-bottom: 27px;
-  padding: 7px 0;
+  margin-bottom: 24px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
@@ -732,12 +777,8 @@ a:active .navigation-icon {
   text-transform: uppercase;
 }
 
-.tab-title-url {
-  display: inline-block;
-  vertical-align: top;
-
+.tab-title-btn {
   width: 165px;
-  text-align: center;
 }
 
 .tab-title-current {
@@ -745,8 +786,14 @@ a:active .navigation-icon {
   color: #f7e184;
 }
 
-.tab-title-current .tab-title-url {
+.tab-title-current .tab-title-btn,
+.tab-title-current .tab-title-btn:hover,
+.tab-title-current .tab-title-btn:focus {
   color: #f7e184;
+}
+
+.tab-title-current .tab-title-btn::before {
+  content: none;
 }
 
 .tab-panel-hidden {
@@ -808,7 +855,7 @@ a:active .navigation-icon {
 /* Featured Brands
 - - - - - - - - - - - - - - - - - - - - */
 .featured-brands {
-  margin-bottom: 95px;
+  margin-bottom: 94px;
 }
 
 .brands-list {
@@ -881,6 +928,10 @@ a:active .navigation-icon {
 - - - - - - - - - - - - - - - - - - - - */
 .about-us {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
   width: 480px;
   padding-top: 52px;
   letter-spacing: normal;
@@ -903,12 +954,41 @@ a:active .navigation-icon {
   margin: 0 0 43px;
 }
 
-.about-us li {
+.delivery-partners {
+  margin-top: 37px;
+}
+
+.delivery-partners li {
+  position: relative;
+  padding-left: 36px;
+
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
   line-height: 40px;
   font-weight: 700;
+
   color: #000;
+}
+
+.delivery-partners li::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+
+  transform: translate(0, -50%);
+
+  width: 5px;
+  height: 5px;
+
+  border: 3px solid #e5e5e5;
+  border-radius: 50%;
+}
+
+.about-btn {
+  width: 260px;
+  margin-top: auto;
+  margin-left: 2px;
 }
 
 /* Contacts
@@ -942,6 +1022,15 @@ a:active .navigation-icon {
 .contacts-text {
   margin: 0 0 40px;
   letter-spacing: -0.18px;
+}
+
+.map-wrapper {
+  margin-bottom: 61px;
+}
+
+.contacts-btn {
+  width: 260px;
+  margin-left: 4px;
 }
 
 /* Catalog page
@@ -1387,7 +1476,7 @@ a:active .navigation-icon {
 /* Footer
 - - - - - - - - - - - - - - - - - - - - */
 .main-footer {
-  margin-top: 80px;
+  margin-top: 81px;
   padding: 60px 0;
   background-color: #464646;
   color: #fff;
