@@ -104,9 +104,17 @@ img {
   position: relative;
   z-index: 1;
 
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 40px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -137,11 +145,13 @@ img {
 
 .btn:hover::before {
   height: 40px;
+  -webkit-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
 }
 
 .btn:focus::before {
   height: 40px;
+  -webkit-transition: height 0.3s ease-in-out;
   transition: height 0.3s ease-in-out;
 }
 
@@ -616,7 +626,11 @@ a:active .navigation-icon {
       -ms-flex-pack: justify;
           justify-content: space-between;
 
-  align-items: center;
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
 
   width: 80px;
 }
@@ -639,20 +653,24 @@ a:active .navigation-icon {
 /* Featured Categories
 - - - - - - - - - - - - - - - - - - - - */
 .featured-categories {
-  margin-bottom: 180px;
+  margin-bottom: 140px;
 }
 
 .featured-categories-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .featured-category {
   width: 160px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.featured-category:nth-child(6n) {
+  margin-right: 0;
 }
 
 .featured-category-url {
@@ -928,9 +946,15 @@ a:active .navigation-icon {
 - - - - - - - - - - - - - - - - - - - - */
 .about-us {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 
   width: 480px;
   padding-top: 52px;
@@ -976,7 +1000,9 @@ a:active .navigation-icon {
   top: 50%;
   left: 0;
 
-  transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+
+          transform: translate(0, -50%);
 
   width: 5px;
   height: 5px;
