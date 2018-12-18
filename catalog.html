@@ -94,6 +94,45 @@
       </div>
     </div>
 
+    <div class="sort-wrapper">
+      <div class="container">
+        <div class="sorting-controls">
+          <b class="sorting-title">Сортировка:</b>
+          <ul class="sorting-params" aria-label="Сортировка списка товаров по критериям" role="menubar">
+            <li class="sorting-param sorting-param-current" aria-selected="true">
+              <span class="visually-hidden">Текущий пункт:</span>
+              <a role="menuitem">По цене</a>
+            </li>
+            <li class="sorting-param">
+              <a href="#" role="menuitem">По типу</a>
+            </li>
+            <li class="sorting-param">
+              <a href="#" role="menuitem">По популярности</a>
+            </li>
+          </ul>
+          <ul class="order-params" aria-label="Сортировка списка товаров по порядку" role="menubar">
+            <li class="order-param">
+              <a class="order-param-url" href="#" role="menuitem" aria-sort="none">
+                <span class="visually-hidden">По возрастанию</span>
+                <svg class="order-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"
+                  fill-opacity="0.2">
+                  <path fill="#231F20" d="M5.5 0L0 10h11z" />
+                </svg>
+              </a>
+            </li>
+            <li class="order-param order-param-current" aria-selected="true">
+              <span class="visually-hidden">Текущий пункт:</span>
+              <a class="order-param-url" role="menuitem" aria-sort="descending">
+                <span class="visually-hidden">По убыванию</span>
+                <svg class="order-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                  <path fill="#231F20" d="M5.5 10L0 0h11" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="catalog-wrapper">
       <div class="container">
         <div class="catalog-columns">
@@ -161,106 +200,78 @@
           </section>
           <section class="catalog">
             <h2 id="catalog-label" class="visually-hidden">Список моноподов для селфи</h2>
-            <div class="sorting-controls">
-              <b class="sorting-title">Сортировка:</b>
-              <ul class="sorting-params" aria-label="Сортировка списка товаров по критериям" role="menubar">
-                <li class="sorting-param sorting-param-current" aria-selected="true">
-                  <span class="visually-hidden">Текущий пункт:</span>
-                  <a role="menuitem">По цене</a>
-                </li>
-                <li class="sorting-param">
-                  <a href="#" role="menuitem">По типу</a>
-                </li>
-                <li class="sorting-param">
-                  <a href="#" role="menuitem">По популярности</a>
-                </li>
-              </ul>
-              <ul class="order-params" aria-label="Сортировка списка товаров по порядку" role="menubar">
-                <li class="order-param">
-                  <a class="order-param-url" href="#" role="menuitem" aria-sort="none">
-                    <span class="visually-hidden">По возрастанию</span>
-                    <svg class="order-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10"
-                      fill-opacity="0.2">
-                      <path fill="#231F20" d="M5.5 0L0 10h11z" />
-                    </svg>
-                  </a>
-                </li>
-                <li class="order-param order-param-current" aria-selected="true">
-                  <span class="visually-hidden">Текущий пункт:</span>
-                  <a class="order-param-url" role="menuitem" aria-sort="descending">
-                    <span class="visually-hidden">По убыванию</span>
-                    <svg class="order-arrow" xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                      <path fill="#231F20" d="M5.5 10L0 0h11" />
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
             <ul class="products-list" role="grid" aria-labelledby="catalog-label">
               <li class="product-item">
-                <a class="product-url" href="product.html">
-                  <h3 class="product-title">
-                    Любительская селфи-палка
-                  </h3>
-                </a>
-                <p class="product-price">
-                  500 руб.
-                </p>
                 <p class="product-image">
                   <img src="img/product-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                 </p>
+                <div class="product-details">
+                  <a class="product-url" href="product.html">
+                    <h3 class="product-title">
+                      Любительская селфи-палка
+                    </h3>
+                  </a>
+                  <span class="product-price">
+                    500 руб.
+                  </span>
+                </div>
                 <div class="product-controls">
                   <button class="btn">В корзину</button>
                   <button class="compare">Добавить к сравнению</button>
                 </div>
               </li>
               <li class="product-item">
-                <a class="product-url" href="product.html">
-                  <h3 class="product-title">
-                    Профессиональная селфи-палка
-                  </h3>
-                </a>
-                <p class="product-price">
-                  1 500 руб.
-                </p>
                 <p class="product-image">
                   <img src="img/product-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                 </p>
+                <div class="product-details">
+                  <a class="product-url" href="product.html">
+                    <h3 class="product-title">
+                      Профессиональная селфи-палка
+                    </h3>
+                  </a>
+                  <span class="product-price">
+                    1 500 руб.
+                  </span>
+                </div>
                 <div class="product-controls">
                   <button class="btn">В корзину</button>
                   <button class="compare">Добавить к сравнению</button>
                 </div>
               </li>
               <li class="product-item">
-                <a class="product-url" href="product.html">
-                  <h3 class="product-title">
-                    Непотопляемая селфи-палка
-                  </h3>
-                </a>
-                <p class="product-price">
-                  2 500 руб.
-                </p>
                 <p class="product-image">
                   <img src="img/product-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                 </p>
+                <div class="product-details">
+                  <a class="product-url" href="product.html">
+                    <h3 class="product-title">
+                      Непотопляемая селфи-палка
+                    </h3>
+                  </a>
+                  <span class="product-price">
+                    2 500 руб.
+                  </span>
+                </div>
                 <div class="product-controls">
                   <button class="btn">В корзину</button>
                   <button class="compare">Добавить к сравнению</button>
                 </div>
               </li>
               <li class="product-item product-item-new">
-                <a class="product-url" href="product.html">
-                  <h3 class="product-title">
-
-                    Селфи-палка «Следуй за мной»
-                  </h3>
-                </a>
-                <p class="product-price">
-                  4 900 руб.
-                </p>
                 <p class="product-image">
                   <img src="img/product-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
                 </p>
+                <div class="product-details">
+                  <a class="product-url" href="product.html">
+                    <h3 class="product-title">
+                      Селфи-палка «Следуй за мной»
+                    </h3>
+                  </a>
+                  <span class="product-price">
+                    4 900 руб.
+                  </span>
+                </div>
                 <div class="product-controls">
                   <button class="btn">В корзину</button>
                   <button class="compare">Добавить к сравнению</button>
