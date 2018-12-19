@@ -274,28 +274,49 @@ h3 {
   margin-right: -3px;
 }
 
-.site-navigation-item:first-child>a {
+.site-navigation-item a {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 24px;
+}
+
+a[aria-haspopup="true"] {
   position: relative;
 }
 
-.site-navigation-item:first-child>a::after {
+a[aria-haspopup="true"]::before,
+a[aria-haspopup="true"]::after {
   position: absolute;
-  top: 0;
-  right: -29px;
   content: "";
-
-  display: block;
-  width: 20px;
-  height: 20px;
-
-  background: url(../img/plus.svg) no-repeat 50% 50%;
-  background-size: 15px;
+  background-color: rgba(39,37,37,0.3);
 }
 
-.sub-navigation-wrapper:focus-within,
-.site-navigation-item:first-child>a:focus+.sub-navigation-wrapper,
-.site-navigation-item:first-child:hover .sub-navigation-wrapper {
+a[aria-haspopup="true"]::before {
+  top: 10px;
+  right: -29px;
+
+  width: 16px;
+  height: 2px;
+}
+
+a[aria-haspopup="true"]::after {
+  top: 3px;
+  right: -22px;
+
+  width: 2px;
+  height: 16px;
+}
+
+
+a[aria-haspopup="true"]:hover + .sub-navigation-wrapper,
+a[aria-haspopup="true"]:focus + .sub-navigation-wrapper,
+.sub-navigation-wrapper:focus-within {
   opacity: 1;
+}
+
+a[aria-haspopup="true"]:hover::after,
+a[aria-haspopup="true"]:focus::after {
+  content: none;
 }
 
 .sub-navigation-wrapper {
@@ -1862,6 +1883,8 @@ a:active .navigation-icon {
 /* Modals
 - - - - - - - - - - - - - - - - - - - - */
 .modal {
+  display: none;
+
   background-color: #fff;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);

@@ -403,20 +403,20 @@
 
   <section class="modal modal-feedback-form" role="dialog" aria-modal="true">
     <h2 class="visually-hidden">Напишите нам</h2>
-    <form class="feedback-form" action="#" method="post">
-      <p>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <div class="form-col feedback-form-name">
         <label for="customer-name">Ваше имя:</label>
         <input id="customer-name" name="customer-name" type="text" placeholder="Имя Фамилия">
-      </p>
-      <p>
+      </div>
+      <div class="form-col feedback-form-email">
         <label for="customer-email">Ваше e-mail:</label>
         <input id="customer-email" name="customer-email" type="email" placeholder="email@example.com">
-      </p>
-      <p>
+      </div>
+      <div class="form-col feedback-form-message">
         <label for="customer-message">Текст письма:</label>
         <textarea id="customer-message" name="customer-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="btn" type="submit">Отправить</button>
+      </div>
+      <button class="btn submit-btn" type="submit">Отправить</button>
     </form>
     <button class="modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
