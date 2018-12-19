@@ -1867,8 +1867,76 @@ a:active .navigation-icon {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+.modal-close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50%;
+  background-color: #f7e296;
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  content: "";
+
+  width: 32px;
+  height: 3px;
+  margin-left: -16px;
+
+  background-color: #fff;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:focus {
+  border: 3px solid #f0c52e;
+  outline: none;
+}
+
+.modal-feedback-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  width: 760px;
+  padding: 96px 100px 50px;
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 34px;
+}
+
+.feedback-form-message {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
 .feedback-form label {
-  display: block;
+  margin-bottom: 5px;
+
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -1876,12 +1944,22 @@ a:active .navigation-icon {
   color: #000;
 }
 
+.feedback-form input {
+  box-sizing: border-box;
+  width: 360px;
+}
+
 .feedback-form input,
 .feedback-form textarea {
+  padding: 16px 20px;
+
   font: inherit;
   font-size: 14px;
   line-height: 18px;
+  letter-spacing: normal;
+
   border: 3px solid #f2f2f2;
+
   background-color: #f2f2f2;
   color: rgba(70, 70, 70, 0.4);
 }
@@ -1897,10 +1975,20 @@ a:active .navigation-icon {
   border-color: #f7e296;
   background-color: #fff;
   color: #464646;
+  outline: none;
 }
 
 .feedback-form input:invalid,
 .feedback-form textarea:invalid {
   background-color: #f6dada;
   border-color: #f6dada;
+}
+
+.submit-btn {
+  min-width: 200px;
+  padding: 0 20px;
+}
+
+.modal-map {
+  display: none;
 }
