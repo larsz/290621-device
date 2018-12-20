@@ -680,7 +680,7 @@ a:active .navigation-icon {
 .slide-btn {
   width: 217px;
   margin-top: 45px;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
   padding-left: 5px;
 }
 
@@ -720,36 +720,37 @@ a:active .navigation-icon {
 .slider-navigation {
   position: absolute;
   bottom: 138px;
-  right: 81px;
+  right: 82px;
+  z-index: 2;
 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
 
-  -webkit-box-align: center;
+  width: 90px;
+}
 
-  -ms-flex-align: center;
-
-  align-items: center;
-
-  width: 80px;
+.slider-navigation-item {
+  line-height: 1;
 }
 
 .slider-btn {
-  width: 12px;
-  height: 12px;
-  padding: 0;
+  padding: 17px;
   border: none;
 
-  background: url(../img/slider-button-empty.svg) no-repeat;
-  background-size: 12px 12px;
+  background: url(../img/slider-button-empty.svg) no-repeat center;
+  background-size: 12px;
+
+  cursor: pointer;
 }
 
 .slider-navigation-item-current .slider-btn {
   background-image: url(../img/slider-button.svg);
+}
+
+.slider-btn:focus {
+  outline: thin dotted;
+  outline: 3px auto #000;
 }
 
 
@@ -1701,7 +1702,6 @@ a:active .navigation-icon {
 /* Footer
 - - - - - - - - - - - - - - - - - - - - */
 .main-footer {
-  /*margin-top: 81px;*/
   padding: 60px 0;
   background-color: #464646;
   color: #fff;
@@ -1760,6 +1760,11 @@ a:active .navigation-icon {
 .main-footer .main-logo-url[href]:active {
   color: rgba(255, 198, 0, 0.3);
 }
+
+.main-footer a:focus {
+  outline-color: #fff;
+}
+
 
 .org-address {
   width: 353px;
@@ -1897,6 +1902,12 @@ a:active .navigation-icon {
 
 .social-btn:active .social-btn-icon {
   fill-opacity: 0.1;
+}
+
+.social-btn:focus {
+  outline: none;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px white;
 }
 
 .powered-by {
