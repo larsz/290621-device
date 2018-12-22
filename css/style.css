@@ -62,8 +62,8 @@ a[href]:active {
 }
 
 :focus {
-  outline: 3px dotted #000;
-  outline-offset: 3px;
+  outline: 2px dotted #000;
+  outline-offset: 2px;
 }
 
 .visually-hidden {
@@ -74,7 +74,7 @@ a[href]:active {
   border: 0;
   padding: 0;
   clip: rect(0 0 0 0);
-  overflow: hidden
+  overflow: hidden;
 }
 
 img {
@@ -110,16 +110,16 @@ img {
   z-index: 1;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
+
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+
   min-height: 40px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -162,15 +162,6 @@ img {
 
 .btn:active {
   color: rgba(0, 0, 0, 0.3);
-}
-
-h2,
-h3 {
-  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 47px;
-  line-height: 48px;
-  font-weight: 700;
-  color: #000;
 }
 
 .regular-text {
@@ -565,7 +556,7 @@ a:active .navigation-icon {
   left: 0;
   right: 0;
 
-  content: '';
+  content: "";
   height: 112px;
 
   background-color: #f7e296;
@@ -788,13 +779,18 @@ a:active .navigation-icon {
   flex-direction: column;
 }
 
-.featured-category h3 {
+.featured-category-title {
   -webkit-box-ordinal-group: 3;
   -ms-flex-order: 2;
   order: 2;
   margin: 34px 0 0;
+
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
+
+  color: #000;
 }
 
 .featured-category-content {
@@ -819,6 +815,10 @@ a:active .navigation-icon {
 }
 
 .featured-category-url:active {
+  color: #000;
+}
+
+.featured-category-url:active .featured-category-thmb {
   opacity: 0.3;
 }
 
@@ -850,7 +850,6 @@ a:active .navigation-icon {
   position: relative;
   top: 3px;
 }
-
 
 /* Services
 - - - - - - - - - - - - - - - - - - - - */
@@ -966,7 +965,14 @@ a:active .navigation-icon {
 
 .service-title {
   margin: -27px 0 31px;
+
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 700;
   letter-spacing: 1.2px;
+
+  color: #000;
 }
 
 .service-description {
@@ -1008,12 +1014,11 @@ a:active .navigation-icon {
   margin: 0 auto;
   height: 78px;
 
-  background: url(../img/partners-logos.png) no-repeat -1000px -1000px;
+  background: url(../img/partners-logos.png) no-repeat;
 }
 
 .brand-dji {
   width: 140px;
-  background-position: 0 0;
 }
 
 .brand-dji:hover,
@@ -1085,6 +1090,12 @@ a:active .navigation-icon {
 
 .about-title {
   margin: 0 0 43px;
+
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #000;
 }
 
 .delivery-partners {
@@ -1151,7 +1162,13 @@ a:active .navigation-icon {
 
 .contacts-title {
   margin: 0 0 43px;
+
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 700;
   letter-spacing: 0.75px;
+  color: #000;
 }
 
 .contacts-text {
@@ -1194,11 +1211,16 @@ a:active .navigation-icon {
 }
 
 .breadcrumb-item {
-  margin-right: 20px;
+  position: relative;
+  margin-right: 35px;
 }
 
 .breadcrumb-item:last-child {
   margin-right: 0;
+}
+
+.breadcrumb-item a {
+  letter-spacing: -0.5px;
 }
 
 .breadcrumb-item a,
@@ -1215,6 +1237,16 @@ a:active .navigation-icon {
   color: rgba(0, 0, 0, 0.1);
 }
 
+.breadcrumb-item:not(.breadcrumb-item-current)::after {
+  position: absolute;
+  top: 12px;
+  right: -20px;
+  content: "";
+
+  width: 5px;
+  height: 8px;
+  background: url(../img/nav-arrow.svg) no-repeat;
+}
 
 .catalog-wrapper {
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #efefef), color-stop(50%, #efefef), color-stop(50%, transparent), to(transparent));
@@ -1235,38 +1267,40 @@ a:active .navigation-icon {
 
 .filters-title {
   margin-top: -70px;
-  margin-bottom: 83px;
+  margin-bottom: 85px;
   padding: 23px 0 23px 61px;
 
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 16px;
+  font-weight: 700;
   line-height: 24px;
   letter-spacing: 3.6px;
   text-transform: uppercase;
   background-color: #dbdbdb;
+  color: #000;
+
 }
 
 .filters-form {
-  padding: 0 70px 0 60px;
+  padding: 0 68px 0 58px;
 }
 
 .filter {
   position: relative;
-
-  margin: 0 0 50px;
-  padding: 0;
-
+  margin: 0 0 49px;
+  padding: 36px 0 0;
   border: none;
 }
 
 .filter-bs {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
 }
 
 .filter::before {
   position: absolute;
   top: -15px;
   left: 0;
-  content: '';
+  content: "";
 
   display: block;
   width: 100%;
@@ -1276,16 +1310,16 @@ a:active .navigation-icon {
 }
 
 .filter-legend {
+  position: absolute;
+  top: -3px;
+  left: 1px;
+
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
 
   color: #000;
-}
-
-.filter-list {
-  margin-top: 15px;
 }
 
 .filter-title {
@@ -1420,8 +1454,8 @@ a:active .navigation-icon {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -1503,7 +1537,7 @@ a:active .navigation-icon {
 .catalog {
   width: 830px;
   padding-top: 69px;
-  padding-bottom: 81px;
+  padding-bottom: 77px;
   background-color: #fff;
 }
 
@@ -1526,12 +1560,12 @@ a:active .navigation-icon {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 
   width: 360px;
   margin-right: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
 }
 
 .product-item:nth-child(2n) {
@@ -1540,7 +1574,7 @@ a:active .navigation-icon {
 
 .product-image {
   height: 380px;
-  margin: 0 0 20px;
+  margin: 0 0 33px;
 }
 
 .product-details {
@@ -1554,8 +1588,10 @@ a:active .navigation-icon {
   width: 260px;
   margin: 0;
 
+  font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
   line-height: 24px;
+  font-weight: 700;
   color: #000;
 }
 
@@ -1567,7 +1603,6 @@ a:active .navigation-icon {
 }
 
 .product-controls {
-  /*display: none;*/
   opacity: 0;
 
   display: flex;
@@ -1583,11 +1618,12 @@ a:active .navigation-icon {
 
   min-height: 380px;
 
-  background:rgba(238,238,238,0.7)
+  background:rgba(238, 238, 238, 0.7);
 }
 
 .compare {
   display: block;
+  margin-top: 10px;
 
   font: inherit;
   font-size: 13px;
@@ -1595,7 +1631,7 @@ a:active .navigation-icon {
   letter-spacing: 0.13px;
 
   background: none;
-  color: #000;
+  color: rgba(0, 0, 0, 0.5);
 
   border: none;
   cursor: pointer;
@@ -1607,21 +1643,25 @@ a:active .navigation-icon {
 
 .product-item-new::after {
   position: absolute;
-  top: 20%;
-  left: 20%;
-  content: "New";
-  display: block;
-  padding: 15px 10px;
+  top: 30px;
+  right: 26px;
+
+  content: "NEW";
+  width: 60px;
+  height: 60px;
+
+  box-sizing: border-box;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 56px;
   font-weight: 700;
   letter-spacing: 0.7px;
-  text-transform: uppercase;
+
+  text-align: center;
 
   border-radius: 50%;
-  border: 1px solid #d8d8d8;
+  border: 2px solid #d8d8d8;
 
   color: rgba(0, 0, 0, 0.2);
 }
@@ -1644,7 +1684,7 @@ a:active .navigation-icon {
   -ms-flex-align: center;
   align-items: center;
 
-  margin-top: 35px;
+  margin-top: -10px;
   margin-left: 70px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -1658,7 +1698,7 @@ a:active .navigation-icon {
 }
 
 .pagination-btn {
-  padding: 30px;
+  padding: 23px 30px;
 }
 
 .pagination-btn[href]:hover,
@@ -1675,17 +1715,16 @@ a:active .navigation-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
+  margin-left: 15px;
 }
 
 .pagination-item {
-  margin-right: 20px;
-}
-
-.pagination-item:last-child {
-  margin-right: 0;
+  min-width: 33px;
 }
 
 .pagination-item a {
+  padding: 14px;
   color: rgba(0, 0, 0, 0.3);
 }
 
@@ -1764,7 +1803,6 @@ a:active .navigation-icon {
 .main-footer a:focus {
   outline-color: #fff;
 }
-
 
 .org-address {
   width: 353px;
@@ -1924,7 +1962,6 @@ a:active .navigation-icon {
 .powered-by:active .ha-icon {
   fill-opacity: 0.3;
 }
-
 
 /* Modals
 - - - - - - - - - - - - - - - - - - - - */
