@@ -393,13 +393,14 @@ a[aria-haspopup="true"]:focus::after {
   background: url(../img/search.svg) no-repeat;
 }
 
-.search input {
+.search-input {
   width: 350px;
   height: 48px;
 
   padding: 0 5px 0 38px;
 
   font: inherit;
+  line-height: 48px;
   letter-spacing: normal;
 
   background: none;
@@ -410,68 +411,63 @@ a[aria-haspopup="true"]:focus::after {
   border-bottom: 2px solid transparent;
 }
 
-.search:focus-within input,
-.search input:focus {
+.search:focus-within .search-input,
+.search-input:focus {
   border-bottom: 2px solid #000;
   color: #000;
 }
 
-.search:focus-within .search-btn,
-.search input:focus .search-btn {
-  opacity: 1;
-}
-
-.search input::-webkit-input-placeholder {
+.search-input::-webkit-input-placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input:-ms-input-placeholder {
+.search-input:-ms-input-placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input::-ms-input-placeholder {
+.search-input::-ms-input-placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input::-webkit-input-placeholder {
+.search-input::-webkit-input-placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input:-ms-input-placeholder {
+.search-input:-ms-input-placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input::placeholder {
+.search-input::placeholder {
   font: inherit;
   color: rgba(0, 0, 0, 0.3);
 }
 
-.search input:hover::-webkit-input-placeholder {
+.search-input:hover::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search input:hover:-ms-input-placeholder {
+.search-input:hover:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search input:hover::-ms-input-placeholder {
+.search-input:hover::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search input:hover::-webkit-input-placeholder {
+.search-input:hover::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search input:hover:-ms-input-placeholder {
+.search-input:hover:-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.search input:hover::placeholder {
+.search-input:hover::placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -498,6 +494,11 @@ a[aria-haspopup="true"]:focus::after {
 .search-btn:active {
   background-color: #000;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.search:focus-within .search-btn,
+.search-input:focus .search-btn {
+  opacity: 1;
 }
 
 /* User navigation
