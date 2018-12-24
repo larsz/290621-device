@@ -1357,25 +1357,25 @@ a:active .navigation-icon {
 
 /* Custom form elements
 - - - - - - - - - - - - - - - - - - - - */
-.styled-checkbox {
-  position: absolute;
-  opacity: 0;
-}
-
 .styled-checkbox+label {
   position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  padding-left: 40px;
   cursor: pointer;
 }
 
 .styled-checkbox+label::before {
+  position: absolute;
+  top: 9px;
+  left: 0;
+
   content: "";
-  display: inline-block;
-  vertical-align: text-top;
 
   width: 26px;
   height: 23px;
 
-  margin-right: 14px;
   background: url(../img/checkbox-off.svg) no-repeat;
 }
 
@@ -1411,25 +1411,25 @@ a:active .navigation-icon {
   background-image: url(../img/checkbox-on.svg);
 }
 
-.styled-radio {
-  position: absolute;
-  opacity: 0;
-}
-
 .styled-radio+label {
   position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  padding-left: 40px;
   cursor: pointer;
 }
 
 .styled-radio+label::before {
+  position: absolute;
+  top: 8px;
+  left: 0;
+
   content: "";
-  display: inline-block;
-  vertical-align: text-top;
 
   width: 25px;
   height: 25px;
 
-  margin-right: 14px;
   background: url(../img/radio-off.svg) no-repeat;
 }
 
