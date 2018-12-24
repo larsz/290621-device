@@ -85,8 +85,12 @@
       <h1 class="visually-hidden">Интернет-магазин Девайс</h1>
       <section class="bestsellers">
         <h2 class="visually-hidden">Хиты продаж</h2>
+        <input id="bestseller-1" class="visually-hidden" name="toggle" type="radio" checked tabindex="-1">
+        <input id="bestseller-2" class="visually-hidden" name="toggle" type="radio" tabindex="-1">
+        <input id="bestseller-3" class="visually-hidden" name="toggle" type="radio" tabindex="-1">
+
         <ul class="slider">
-          <li class="slide">
+          <li id="slide-1" class="slide">
             <div class="slide-image">
               <img class="slide-image-thmb" src="img/slide-1.png" width="384" height="486" alt="Любительская селфи-палка">
             </div>
@@ -116,7 +120,7 @@
               </table>
             </div>
           </li>
-          <li class="slide slide-hidden" aria-hidden="true">
+          <li id="slide-2" class="slide" aria-hidden="true">
             <div class="slide-image">
               <img class="slide-image-thmb" src="img/slide-2.png" width="345" height="485" alt="Фитнес-браслет">
             </div>
@@ -141,7 +145,7 @@
               </table>
             </div>
           </li>
-          <li class="slide slide-hidden" aria-hidden="true">
+          <li id="slide-3" class="slide" aria-hidden="true">
             <div class="slide-image">
               <img class="slide-image-thmb" src="img/slide-3.png" width="526" height="334" alt="Квадрокоптер">
             </div>
@@ -171,14 +175,14 @@
           </li>
         </ul>
         <ul class="slider-navigation">
-          <li class="slider-navigation-item slider-navigation-item-current">
-            <button class="slider-btn"><span class="visually-hidden">Предыдущий товар</span></button>
+          <li class="slider-navigation-item" role="presentation">
+            <label class="slider-btn" for="bestseller-1"><span class="visually-hidden">Текущий товар</span></label>
           </li>
           <li class="slider-navigation-item" role="presentation">
-            <button class="slider-btn"><span class="visually-hidden">Текущий товар</span></button>
+            <label class="slider-btn" for="bestseller-2"><span class="visually-hidden">Следущий товар</span></label>
           </li>
           <li class="slider-navigation-item" role="presentation">
-            <button class="slider-btn"><span class="visually-hidden">Следущий товар</span></button>
+            <label class="slider-btn" for="bestseller-3"><span class="visually-hidden">Последний товар</span></label>
           </li>
         </ul>
       </section>
