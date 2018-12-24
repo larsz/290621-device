@@ -1679,6 +1679,15 @@ a:active .navigation-icon {
   cursor: pointer;
 }
 
+.compare:hover,
+.compare:focus {
+  color: #000;
+}
+
+.compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
 .product-item-new {
   position: relative;
 }
