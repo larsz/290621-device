@@ -141,34 +141,46 @@
             <form class="filters-form" action="#" method="get">
               <fieldset class="filter filter-price">
                 <legend class="filter-legend">Стоимость</legend>
-                <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500">
-                <button id="min-price-control" type="button">Уменьшить цену</button>
-                <button id="max-price-control" type="button">Увеличить цену</button>
+                <!-- <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500"> -->
+
+                <div class="product-price">
+                  <div class="product-price-scale">
+                    <div class="scale-bar"></div>
+                  </div>
+                  <button id="min-price-control" class="price-control price-control-min" type="button">
+                    <span class="visually-hidden">Уменьшить цену</span>
+                  </button>
+                  <button id="max-price-control" type="button" class="price-control price-control-max">
+                    <span class="visually-hidden">Увеличить цену</span>
+                  </button>
+                </div>
               </fieldset>
               <fieldset class="filter filter-color">
                 <legend class="filter-legend">Цвет</legend>
                 <ul class="filter-list" aria-label="Доступные цвета" role="listbox">
                   <li role="option">
-                    <input id="color-black" class="visually-hidden styled-checkbox" name="product-color" type="checkbox" value="black"
-                      checked>
+                    <input id="color-black" class="visually-hidden styled-checkbox" name="product-color" type="checkbox"
+                      value="black" checked>
                     <label class="filter-title" for="color-black">Черный</label>
                   </li>
                   <li role="option">
-                    <input id="color-white" class="visually-hidden styled-checkbox" name="product-color" type="checkbox" value="white">
+                    <input id="color-white" class="visually-hidden styled-checkbox" name="product-color" type="checkbox"
+                      value="white">
                     <label class="filter-title" for="color-white">Белый</label>
                   </li>
                   <li role="option">
-                    <input id="color-blue" class="visually-hidden styled-checkbox" name="product-color" type="checkbox" value="blue"
-                      disabled>
+                    <input id="color-blue" class="visually-hidden styled-checkbox" name="product-color" type="checkbox"
+                      value="blue" disabled>
                     <label class="filter-title" for="color-blue">Синий</label>
                   </li>
                   <li role="option">
-                    <input id="color-red" class="visually-hidden styled-checkbox" name="product-color" type="checkbox" value="red"
-                      disabled checked>
+                    <input id="color-red" class="visually-hidden styled-checkbox" name="product-color" type="checkbox"
+                      value="red" disabled checked>
                     <label class="filter-title" for="color-red">Красный</label>
                   </li>
                   <li role="option">
-                    <input id="color-pink" class="visually-hidden styled-checkbox" name="product-color" type="checkbox" value="pink">
+                    <input id="color-pink" class="visually-hidden styled-checkbox" name="product-color" type="checkbox"
+                      value="pink">
                     <label class="filter-title" for="color-pink">Розовый</label>
                   </li>
                 </ul>
@@ -181,16 +193,18 @@
                     <label class="filter-title" for="bluetooth-ready">Есть</label>
                   </li>
                   <li>
-                    <input id="bluetooth-no" class="visually-hidden styled-radio" name="bluetooth-availability" type="radio" checked>
+                    <input id="bluetooth-no" class="visually-hidden styled-radio" name="bluetooth-availability" type="radio"
+                      checked>
                     <label class="filter-title" for="bluetooth-no">Нет</label>
                   </li>
                   <li>
-                    <input id="bluetooth-no2" class="visually-hidden styled-radio" name="bluetooth-availability1" type="radio" disabled>
+                    <input id="bluetooth-no2" class="visually-hidden styled-radio" name="bluetooth-availability1" type="radio"
+                      disabled>
                     <label class="filter-title" for="bluetooth-no2">Нет</label>
                   </li>
                   <li>
-                    <input id="bluetooth-no3" class="visually-hidden styled-radio" name="bluetooth-availability1" type="radio" disabled
-                      checked>
+                    <input id="bluetooth-no3" class="visually-hidden styled-radio" name="bluetooth-availability1" type="radio"
+                      disabled checked>
                     <label class="filter-title" for="bluetooth-no3">Нет</label>
                   </li>
                 </ul>

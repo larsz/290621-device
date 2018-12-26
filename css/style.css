@@ -66,13 +66,19 @@ a[href]:active {
   outline-offset: 2px;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -279,7 +285,7 @@ a[aria-haspopup="true"]::before,
 a[aria-haspopup="true"]::after {
   position: absolute;
   content: "";
-  background-color: rgba(39,37,37,0.3);
+  background-color: rgba(39, 37, 37, 0.3);
 }
 
 a[aria-haspopup="true"]::before {
@@ -301,8 +307,8 @@ a[aria-haspopup="true"]::after {
 
 .site-navigation-item:first-child:hover .sub-navigation-wrapper,
 .site-navigation-item:first-child:focus-within .sub-navigation-wrapper,
-a[aria-haspopup="true"]:hover + .sub-navigation-wrapper,
-a[aria-haspopup="true"]:focus + .sub-navigation-wrapper {
+a[aria-haspopup="true"]:hover+.sub-navigation-wrapper,
+a[aria-haspopup="true"]:focus+.sub-navigation-wrapper {
   visibility: visible;
 }
 
@@ -754,17 +760,17 @@ a:active .navigation-icon {
   outline: 3px auto #000;
 }
 
-#bestseller-1:checked ~ .slider #slide-1,
-#bestseller-2:checked ~ .slider #slide-2,
-#bestseller-3:checked ~ .slider #slide-3 {
+#bestseller-1:checked~.slider #slide-1,
+#bestseller-2:checked~.slider #slide-2,
+#bestseller-3:checked~.slider #slide-3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#bestseller-1:checked ~ .slider-navigation label[for="bestseller-1"],
-#bestseller-2:checked ~ .slider-navigation label[for="bestseller-2"],
-#bestseller-3:checked ~ .slider-navigation label[for="bestseller-3"] {
+#bestseller-1:checked~.slider-navigation label[for="bestseller-1"],
+#bestseller-2:checked~.slider-navigation label[for="bestseller-2"],
+#bestseller-3:checked~.slider-navigation label[for="bestseller-3"] {
   background-image: url(../img/slider-button.svg);
 }
 
@@ -1306,7 +1312,7 @@ a:active .navigation-icon {
 }
 
 .filters-form {
-  padding: 0 68px 0 58px;
+  padding: 0 68px 25px 58px;
 }
 
 .filter {
@@ -1353,6 +1359,68 @@ a:active .navigation-icon {
 
 .filter-btn {
   width: 100%;
+}
+
+/* Price slider
+- - - - - - - - - - - - - - - - - - - - */
+.product-price {
+  position: relative;
+}
+
+.product-price-scale {
+  height: 2px;
+  background-color: #000;
+}
+
+.scale-bar {
+  width: 80%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.price-control {
+  position: absolute;
+  top: -9px;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px #dadada;
+  box-shadow: 0 2px 1px #dadada;
+  cursor: pointer;
+}
+
+.price-control:hover,
+.price-control:focus {
+  transform: scale(1.1);
+}
+
+.price-control:focus {
+  outline: none;
+}
+
+.price-control::before {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  content: "";
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #ababab;
+  border-radius: 50%;
+}
+
+.price-control-min {
+  left: 0;
+}
+
+.price-control-max {
+  left: 80%;
 }
 
 /* Custom form elements
@@ -1606,13 +1674,13 @@ a:active .navigation-icon {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .product-title {
@@ -1643,14 +1711,14 @@ a:active .navigation-icon {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 
   position: absolute;
   top: 0;
@@ -1660,7 +1728,7 @@ a:active .navigation-icon {
 
   min-height: 380px;
 
-  background:rgba(238, 238, 238, 0.7);
+  background: rgba(238, 238, 238, 0.7);
 }
 
 .compare {
@@ -1702,8 +1770,7 @@ a:active .navigation-icon {
   height: 60px;
 
   -webkit-box-sizing: border-box;
-
-          box-sizing: border-box;
+  box-sizing: border-box;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
@@ -1730,6 +1797,8 @@ a:active .navigation-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -1999,7 +2068,7 @@ a:active .navigation-icon {
   outline: none;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 0 2px white;
-          box-shadow: 0 0 0 2px white;
+  box-shadow: 0 0 0 2px white;
 }
 
 .powered-by {
@@ -2056,12 +2125,12 @@ a:active .navigation-icon {
 
 .modal-close::before {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .modal-close::after {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .modal-close:focus {
@@ -2075,7 +2144,7 @@ a:active .navigation-icon {
   left: 50%;
   z-index: 2;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 760px;
   padding: 96px 100px 50px;
 }
@@ -2085,10 +2154,10 @@ a:active .navigation-icon {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .form-col {
@@ -2097,8 +2166,8 @@ a:active .navigation-icon {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin-bottom: 34px;
 }
 
@@ -2119,7 +2188,7 @@ a:active .navigation-icon {
 
 .feedback-form input {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 360px;
 }
 
