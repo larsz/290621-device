@@ -67,7 +67,7 @@
           </li>
         </ul>
       </div>
-      <nav class="main-navigation">
+      <nav id="main-navigation" class="main-navigation">
         <ul class="site-navigation" aria-label="Основное меню" role="menubar">
           <li class="site-navigation-item">
             <a href="all-products.html" role="menuitem" aria-haspopup="true" aria-expanded="false">Каталог товаров</a>
@@ -149,8 +149,6 @@
             <form class="filters-form" action="#" method="get">
               <fieldset class="filter filter-price">
                 <legend class="filter-legend">Стоимость</legend>
-                <!-- <input id="product-price" name="product-price" type="range" min="0" max="10000" value="500"> -->
-
                 <div class="product-price">
                   <div class="product-price-scale">
                     <div class="scale-bar"></div>
@@ -161,6 +159,10 @@
                   <button id="max-price-control" type="button" class="price-control price-control-max">
                     <span class="visually-hidden">Увеличить цену</span>
                   </button>
+                  <div class="price-indicator">
+                    <label class="min-price-label">от <input class="min-price" name="min-price" type="text" placeholder="0" value="0"></label>
+                    <label class="max-price-label">до <input class="max-price" name="max-price" type="text" placeholder="5000" value="5000"></label>
+                  </div>
                 </div>
               </fieldset>
               <fieldset class="filter filter-color">
