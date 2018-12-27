@@ -105,7 +105,8 @@ img {
 .sorting-params,
 .order-params,
 .products-list,
-.pagination-list {
+.pagination-list,
+.skip-links {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -200,10 +201,40 @@ img {
 /* header
 - - - - - - - - - - - - - - - - - - - - */
 .main-header-wrapper {
+  position: relative;
   margin-top: 40px;
   padding-top: 4px;
   background-color: #f7e296;
 }
+
+/* skip links
+- - - - - - - - - - - - - - - - - - - - */
+.skip-links {
+  position: absolute;
+  top: -20px;
+  left: 280px;
+  width: 500px;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 1;
+}
+
+.skip-link-url {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link-url:active,
+.skip-link-url:focus {
+  display: block;
+  position: static;
+  left: 0;
+  padding: 5px 15px;
+}
+
+
 
 /* logo
 - - - - - - - - - - - - - - - - - - - - */
