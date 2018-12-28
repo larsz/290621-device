@@ -78,6 +78,8 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
+  -webkit-clip-path: inset(100%);
+
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -533,7 +535,7 @@ a[aria-haspopup="true"]:focus::after {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.search-input:focus + .search-btn,
+.search-input:focus+.search-btn,
 .search:focus-within .search-btn,
 .search-btn:focus,
 .search-btn:active {
@@ -546,7 +548,7 @@ a[aria-haspopup="true"]:focus::after {
 }
 
 .search-btn:focus,
-.search input[type=search]:focus + .search-btn {
+.search input[type=search]:focus+.search-btn {
   opacity: 1;
 }
 
@@ -1445,6 +1447,7 @@ a:active .navigation-icon {
 .price-control:hover,
 .price-control:focus,
 .price-control:active {
+  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -2185,6 +2188,13 @@ a:active .navigation-icon {
 .modal {
   display: none;
 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
   background-color: #fff;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -2197,6 +2207,7 @@ a:active .navigation-icon {
 
   width: 55px;
   height: 55px;
+
   border: none;
   border-radius: 50%;
   background-color: #f7e296;
@@ -2233,12 +2244,6 @@ a:active .navigation-icon {
 }
 
 .modal-feedback-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   width: 760px;
   padding: 96px 100px 50px;
 }
@@ -2327,5 +2332,10 @@ a:active .navigation-icon {
 }
 
 .modal-map {
-  display: none;
+  width: 960px;
+  height: 590px;
+}
+
+.modal-map iframe {
+  border: none;
 }

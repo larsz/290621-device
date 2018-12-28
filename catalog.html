@@ -150,7 +150,7 @@
               <fieldset class="filter filter-price">
                 <legend class="filter-legend">Стоимость</legend>
                 <div class="product-price">
-                  <div class="product-price-scale">
+                  <div class="product-price-scale" aria-label="Выбор цены">
                     <div class="scale-bar"></div>
                   </div>
                   <button id="min-price-control" class="price-control price-control-min" type="button">
@@ -160,8 +160,10 @@
                     <span class="visually-hidden">Увеличить цену</span>
                   </button>
                   <div class="price-indicator">
-                    <label class="min-price-label">от <input class="min-price" name="min-price" type="text" placeholder="0" value="0"></label>
-                    <label class="max-price-label">до <input class="max-price" name="max-price" type="text" placeholder="5000" value="5000"></label>
+                    <label class="min-price-label">от <input class="min-price" name="min-price" type="text" placeholder="0"
+                        value="0"></label>
+                    <label class="max-price-label">до <input class="max-price" name="max-price" type="text" placeholder="5000"
+                        value="5000"></label>
                   </div>
                 </div>
               </fieldset>
@@ -206,16 +208,6 @@
                     <input id="bluetooth-no" class="visually-hidden styled-radio" name="bluetooth-availability" type="radio"
                       checked>
                     <label class="filter-title" for="bluetooth-no">Нет</label>
-                  </li>
-                  <li>
-                    <input id="bluetooth-no2" class="visually-hidden styled-radio" name="bluetooth-availability1" type="radio"
-                      disabled>
-                    <label class="filter-title" for="bluetooth-no2">Нет</label>
-                  </li>
-                  <li>
-                    <input id="bluetooth-no3" class="visually-hidden styled-radio" name="bluetooth-availability1" type="radio"
-                      disabled checked>
-                    <label class="filter-title" for="bluetooth-no3">Нет</label>
                   </li>
                 </ul>
               </fieldset>
@@ -449,9 +441,10 @@
 
   <section class="modal modal-map" role="dialog" aria-modal="true">
     <h2 class="visually-hidden">Как до нас добраться</h2>
-    <p>
-      <img src="img/map-big.jpg" width="960" height="559" alt="Офис компании по адресу Москва, ул. Строителей, 15">
-    </p>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.1125488779953!2d37.527429316060946!3d55.68703098053586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2sUlitsa+Stroiteley%2C+15%2C+Moskva%2C+Russia%2C+119311!5e0!3m2!1sen!2s!4v1545998440148"
+      width="960" height="590" allowfullscreen name="г. Москва, ул. Строителей, 15"></iframe>
+
     <button class="modal-close" type="button">
       <span class="visually-hidden">Закрыть</span>
     </button>
