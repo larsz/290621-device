@@ -2243,6 +2243,10 @@ a:active .navigation-icon {
   outline: none;
 }
 
+.modal-open {
+  display: block;
+}
+
 .modal-feedback-form {
   width: 760px;
   padding: 96px 100px 50px;
