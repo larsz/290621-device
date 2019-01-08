@@ -54,7 +54,8 @@
   var showFeedBackForm = function () {
     initDOMElements();
     feedBackFormPopup.classList.add('modal-open');
-    feedBackForm.addEventListener('submit', feedBackFormSubmitHandler);
+
+    setupFormSpecificEvents();
 
     if (returnedCustomerName) {
       customerNameField.value = returnedCustomerName;
@@ -65,6 +66,11 @@
       customerEmailField.value = returnedCustomerEmail;
       customerMessageField.focus();
     }
+
+    if (!returnedCustomerName && !returnedCustomerEmail) {
+      customerNameField.focus();
+    }
+
   };
 
   var hideFeedBackForm = function () {
@@ -72,6 +78,7 @@
     customerNameField.value = '';
     customerEmailField.value = '';
     customerMessageField.value = '';
+    destroyFormSpecificEvents();
   };
 
   var feedBackFormSubmitHandler = function (evt) {
@@ -89,6 +96,32 @@
         localStorage.setItem('device_customer_email', customerEmailField.value);
       }
     }
+  };
+
+  var feedBackFormCloseBtnKeyDownHandler = function (evt) {
+    isEnterEvent(evt, hideFeedBackForm);
+  };
+
+  var feedBackFormCloseBtnClickHandler = function () {
+    hideFeedBackForm();
+  };
+
+  var feedBackFormEscClickHandler = function (evt) {
+    isEscEvent(evt, hideFeedBackForm);
+  };
+
+  var setupFormSpecificEvents = function () {
+    feedBackForm.addEventListener('submit', feedBackFormSubmitHandler);
+    feedBackFormCloseBtn.addEventListener('click', feedBackFormCloseBtnClickHandler);
+    feedBackFormCloseBtn.addEventListener('keydown', feedBackFormCloseBtnKeyDownHandler);
+    document.addEventListener('keydown', feedBackFormEscClickHandler);
+  };
+
+  var destroyFormSpecificEvents = function () {
+    feedBackForm.removeEventListener('submit', feedBackFormSubmitHandler);
+    feedBackFormCloseBtn.removeEventListener('click', feedBackFormCloseBtnClickHandler);
+    feedBackFormCloseBtn.removeEventListener('keydown', feedBackFormCloseBtnKeyDownHandler);
+    document.removeEventListener('keydown', feedBackFormEscClickHandler);
   };
 
   var contactUsBtnClickHandler = function (evt) {
