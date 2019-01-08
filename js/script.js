@@ -8,12 +8,15 @@
   };
 
   var contactUsBtn = document.querySelector('.contacts-btn');
+  var mapBtn = document.querySelector('.map');
   var feedBackFormPopup;
   var feedBackForm;
   var feedBackFormCloseBtn;
   var customerNameField;
   var customerEmailField;
   var customerMessageField;
+  var mapPopup;
+  var mapCloseBtn;
   var isStorageSupport = true;
   var returnedCustomerName = '';
   var returnedCustomerEmail = '';
@@ -39,6 +42,11 @@
     customerMessageField = feedBackFormPopup.querySelector('#customer-message');
   };
 
+  var initMapDOMElements = function () {
+    mapPopup = document.querySelector('.modal-map');
+    mapCloseBtn = mapPopup.querySelector('.modal-close');
+  };
+
   var isEscEvent = function (evt, action) {
     if (evt.keyCode === KeyCode.ESC && typeof action === 'function') {
       action();
@@ -49,6 +57,33 @@
     if (evt.keyCode === KeyCode.ENTER && typeof action === 'function') {
       action();
     }
+  };
+
+  var feedBackFormCloseBtnKeyDownHandler = function (evt) {
+    isEnterEvent(evt, hideFeedBackForm);
+  };
+
+  var feedBackFormCloseBtnClickHandler = function (evt) {
+    evt.preventDefault();
+    hideFeedBackForm();
+  };
+
+  var feedBackFormEscClickHandler = function (evt) {
+    isEscEvent(evt, hideFeedBackForm);
+  };
+
+  var setupFormSpecificEvents = function () {
+    feedBackForm.addEventListener('submit', feedBackFormSubmitHandler);
+    feedBackFormCloseBtn.addEventListener('click', feedBackFormCloseBtnClickHandler);
+    feedBackFormCloseBtn.addEventListener('keydown', feedBackFormCloseBtnKeyDownHandler);
+    document.addEventListener('keydown', feedBackFormEscClickHandler);
+  };
+
+  var destroyFormSpecificEvents = function () {
+    feedBackForm.removeEventListener('submit', feedBackFormSubmitHandler);
+    feedBackFormCloseBtn.removeEventListener('click', feedBackFormCloseBtnClickHandler);
+    feedBackFormCloseBtn.removeEventListener('keydown', feedBackFormCloseBtnKeyDownHandler);
+    document.removeEventListener('keydown', feedBackFormEscClickHandler);
   };
 
   var showFeedBackForm = function () {
@@ -74,11 +109,15 @@
   };
 
   var hideFeedBackForm = function () {
+    feedBackFormPopup.classList.remove('modal-error');
     feedBackFormPopup.classList.remove('modal-open');
+
     customerNameField.value = '';
     customerEmailField.value = '';
     customerMessageField.value = '';
+
     destroyFormSpecificEvents();
+    contactUsBtn.focus();
   };
 
   var feedBackFormSubmitHandler = function (evt) {
@@ -98,30 +137,41 @@
     }
   };
 
-  var feedBackFormCloseBtnKeyDownHandler = function (evt) {
-    isEnterEvent(evt, hideFeedBackForm);
+  var mapCloseBtnClickHandler = function (evt) {
+    evt.preventDefault();
+    hideMap();
   };
 
-  var feedBackFormCloseBtnClickHandler = function () {
-    hideFeedBackForm();
+  var mapCloseBtnKeyDownHandler = function (evt) {
+    isEnterEvent(evt, hideMap);
   };
 
-  var feedBackFormEscClickHandler = function (evt) {
-    isEscEvent(evt, hideFeedBackForm);
+  var mapEscClickHandler = function (evt) {
+    isEscEvent(evt, hideMap);
   };
 
-  var setupFormSpecificEvents = function () {
-    feedBackForm.addEventListener('submit', feedBackFormSubmitHandler);
-    feedBackFormCloseBtn.addEventListener('click', feedBackFormCloseBtnClickHandler);
-    feedBackFormCloseBtn.addEventListener('keydown', feedBackFormCloseBtnKeyDownHandler);
-    document.addEventListener('keydown', feedBackFormEscClickHandler);
+  var showMap = function () {
+    initMapDOMElements();
+    mapPopup.classList.add('modal-open');
+
+    document.addEventListener('keydown', mapEscClickHandler);
+    mapCloseBtn.addEventListener('click', mapCloseBtnClickHandler);
+    mapCloseBtn.addEventListener('keydown', mapCloseBtnKeyDownHandler);
+    mapCloseBtn.focus();
   };
 
-  var destroyFormSpecificEvents = function () {
-    feedBackForm.removeEventListener('submit', feedBackFormSubmitHandler);
-    feedBackFormCloseBtn.removeEventListener('click', feedBackFormCloseBtnClickHandler);
-    feedBackFormCloseBtn.removeEventListener('keydown', feedBackFormCloseBtnKeyDownHandler);
-    document.removeEventListener('keydown', feedBackFormEscClickHandler);
+  var hideMap = function () {
+    mapPopup.classList.remove('modal-open');
+    mapBtn.focus();
+
+    document.removeEventListener('keydown', mapEscClickHandler);
+    mapCloseBtn.removeEventListener('click', mapCloseBtnClickHandler);
+    mapCloseBtn.removeEventListener('keydown', mapCloseBtnKeyDownHandler);
+  };
+
+  var mapBtnClickHandler = function (evt) {
+    evt.preventDefault();
+    showMap();
   };
 
   var contactUsBtnClickHandler = function (evt) {
@@ -130,5 +180,6 @@
   };
 
   contactUsBtn.addEventListener('click', contactUsBtnClickHandler);
+  mapBtn.addEventListener('click', mapBtnClickHandler);
 
 })();
