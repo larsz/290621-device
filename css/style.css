@@ -34,6 +34,102 @@
     url("../fonts/opensanslight.woff") format("woff");
 }
 
+@-webkit-keyframes bounce {
+  from {
+    -webkit-transform: translate(-50%, 150%);
+    transform: translate(-50%, 150%);
+  }
+
+  70% {
+    -webkit-transform: translate(-50%, -65%);
+    transform: translate(-50%, -65%);
+  }
+
+  90% {
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes bounce {
+  from {
+    -webkit-transform: translate(-50%, 150%);
+    transform: translate(-50%, 150%);
+  }
+
+  70% {
+    -webkit-transform: translate(-50%, -65%);
+    transform: translate(-50%, -65%);
+  }
+
+  90% {
+    -webkit-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+  }
+
+  to {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-49.5%, -50%);
+    transform: translate(-49.5%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-50.5%, -50%);
+    transform: translate(-50.5%, -50%);
+  }
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate(-49.5%, -50%);
+    transform: translate(-49.5%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -1824,7 +1920,6 @@ a:active .navigation-icon {
   z-index: 1;
 
   min-height: 380px;
-
   background: rgba(238, 238, 238, 0.7);
 }
 
@@ -2004,6 +2099,10 @@ a:active .navigation-icon {
 
 .main-footer a {
   color: #fff;
+}
+
+.main-footer .main-logo {
+  margin-right: 20px;
 }
 
 .main-footer .main-logo-url {
@@ -2198,6 +2297,9 @@ a:active .navigation-icon {
   background-color: #fff;
   -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+  -webkit-animation: zoomOut 0.6s;
+  animation: zoomOut 0.6s;
 }
 
 .modal-close {
@@ -2245,6 +2347,17 @@ a:active .navigation-icon {
 
 .modal-open {
   display: block;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.modal-error {
+  -webkit-animation: shake 0.6s;
+  animation: shake 0.6s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
 }
 
 .modal-feedback-form {
