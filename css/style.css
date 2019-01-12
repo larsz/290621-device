@@ -1356,6 +1356,14 @@ a:active .navigation-icon {
   margin-bottom: 61px;
 }
 
+.map {
+  display: block;
+}
+
+.map-thmb {
+  vertical-align: top;
+}
+
 .contacts-btn {
   width: 260px;
   margin-left: 4px;
@@ -2458,6 +2466,15 @@ a:active .navigation-icon {
   height: 590px;
 }
 
+.modal-map-url {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .modal-map iframe {
+  position: relative;
+  z-index: 2;
   border: none;
 }
