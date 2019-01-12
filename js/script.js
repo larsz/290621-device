@@ -21,17 +21,8 @@
   var returnedCustomerName = '';
   var returnedCustomerEmail = '';
 
-  try {
-    returnedCustomerName = localStorage.getItem('device_customer_login');
-  } catch (err) {
-    isStorageSupport = false;
-  }
-
-  try {
-    returnedCustomerEmail = localStorage.getItem('device_customer_email');
-  } catch (err) {
-    isStorageSupport = false;
-  }
+  var servicesTabs;
+  var servicesPanels;
 
   var initDOMElements = function () {
     feedBackFormPopup = document.querySelector('.modal-feedback-form');
@@ -45,6 +36,11 @@
   var initMapDOMElements = function () {
     mapPopup = document.querySelector('.modal-map');
     mapCloseBtn = mapPopup.querySelector('.modal-close');
+  };
+
+  var initTabSwitcherElements = function () {
+    servicesTabs = document.querySelectorAll('[role="tab"]');
+    servicesPanels = document.querySelectorAll('[role="tabpanel"]');
   };
 
   var isEscEvent = function (evt, action) {
@@ -123,10 +119,12 @@
   var feedBackFormSubmitHandler = function (evt) {
     if (!customerNameField.value) {
       evt.preventDefault();
+      feedBackFormPopup.classList.remove('modal-error');
       feedBackFormPopup.classList.add('modal-error');
       customerNameField.focus();
     } else if (!customerEmailField.value) {
       evt.preventDefault();
+      feedBackFormPopup.classList.remove('modal-error');
       feedBackFormPopup.classList.add('modal-error');
       customerEmailField.focus();
     } else {
@@ -179,7 +177,77 @@
     showFeedBackForm();
   };
 
-  contactUsBtn.addEventListener('click', contactUsBtnClickHandler);
-  mapBtn.addEventListener('click', mapBtnClickHandler);
+
+  var registerTabsEvents = function (tabIndex) {
+    servicesTabs[tabIndex].addEventListener('click', serviceTabClickHandler);
+    servicesTabs[tabIndex].index = tabIndex;
+  };
+
+  var serviceTabClickHandler = function (evt) {
+    evt.preventDefault();
+    var tab = evt.target;
+    activateTab(tab);
+  };
+
+  var deactivateTabs = function () {
+    servicesTabs.forEach(function (serviceTab) {
+      var tabParent = serviceTab.parentNode;
+
+      if (tabParent.classList.contains('tab-title-current')) {
+        tabParent.classList.remove('tab-title-current');
+      }
+
+    });
+  };
+
+  var deactivatePanels = function () {
+    servicesPanels.forEach(function (servicesPanel) {
+      if (servicesPanel.classList.contains('tab-panel-open')) {
+        servicesPanel.classList.remove('tab-panel-open');
+      }
+    });
+  };
+
+  var activateTab = function (tab) {
+    deactivateTabs();
+    deactivatePanels();
+
+    var selectedTabParent = tab.parentNode;
+    var selectedTabPanel = tab.getAttribute('aria-controls');
+    var selectedTabPanelBox = document.querySelector('#' + selectedTabPanel);
+
+    tab.setAttribute('aria-selected', 'true');
+    selectedTabParent.classList.add('tab-title-current');
+
+    selectedTabPanelBox.classList.add('tab-panel-open');
+    selectedTabPanelBox.removeAttribute('aria-hidden');
+  };
+
+  var tabSwitcherInit = function () {
+    initTabSwitcherElements();
+
+    for (var i = 0; i < servicesTabs.length; i++) {
+      registerTabsEvents(i);
+    }
+
+  };
+
+  var pageInit = function () {
+
+    try {
+      returnedCustomerName = localStorage.getItem('device_customer_login');
+      returnedCustomerEmail = localStorage.getItem('device_customer_email');
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
+    tabSwitcherInit();
+
+    contactUsBtn.addEventListener('click', contactUsBtnClickHandler);
+    mapBtn.addEventListener('click', mapBtnClickHandler);
+
+  };
+
+  pageInit();
 
 })();

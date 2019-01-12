@@ -1094,9 +1094,14 @@ a:active .navigation-icon {
 }
 
 .tab-panel {
+  display: none;
   position: relative;
   width: 760px;
   background-color: #e5e5e5;
+}
+
+.tab-panel-open {
+  display: block;
 }
 
 .tab-panel::after {
