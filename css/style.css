@@ -226,6 +226,7 @@ img {
   align-items: center;
 
   min-height: 40px;
+  height: 40px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 18px;
@@ -241,11 +242,15 @@ img {
 
 .btn::before {
   position: absolute;
+  top: 50%;
   left: 0;
   right: 0;
   z-index: -1;
 
   content: "";
+
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 
   display: block;
   height: 8px;
