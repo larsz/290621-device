@@ -274,6 +274,10 @@ img {
   letter-spacing: -0.25px;
 }
 
+.regular-text:last-child {
+  letter-spacing: -0.45px;
+}
+
 /* layout
 - - - - - - - - - - - - - - - - - - - - */
 .container {
@@ -871,7 +875,7 @@ a:active .navigation-icon {
 
 .slider-navigation {
   position: absolute;
-  bottom: 138px;
+  bottom: 144px;
   right: 82px;
   z-index: 2;
 
@@ -1265,7 +1269,7 @@ a:active .navigation-icon {
 }
 
 .about-title {
-  margin: 0 0 43px;
+  margin: 0 0 44px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
@@ -1337,7 +1341,7 @@ a:active .navigation-icon {
 }
 
 .contacts-title {
-  margin: 0 0 43px;
+  margin: 0 0 44px;
 
   font-family: "Gilroy", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 47px;
@@ -1353,7 +1357,7 @@ a:active .navigation-icon {
 }
 
 .map-wrapper {
-  margin-bottom: 61px;
+  margin-bottom: 67px;
 }
 
 .map {
@@ -2319,6 +2323,7 @@ a:active .navigation-icon {
   position: absolute;
   top: 22px;
   right: 22px;
+  z-index: 3;
 
   width: 55px;
   height: 55px;
@@ -2454,6 +2459,10 @@ a:active .navigation-icon {
 .feedback-form textarea:invalid {
   background-color: #f6dada;
   border-color: #f6dada;
+}
+
+.feedback-form textarea {
+  resize: none;
 }
 
 .submit-btn {
