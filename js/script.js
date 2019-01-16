@@ -190,22 +190,21 @@
   };
 
   var deactivateTabs = function () {
-    servicesTabs.forEach(function (serviceTab) {
-      var tabParent = serviceTab.parentNode;
+    for (var i = 0, max = servicesTabs.length; i < max; i++) {
+      var tabParent = servicesTabs[i].parentNode;
 
       if (tabParent.classList.contains('tab-title-current')) {
         tabParent.classList.remove('tab-title-current');
       }
-
-    });
+    }
   };
 
   var deactivatePanels = function () {
-    servicesPanels.forEach(function (servicesPanel) {
-      if (servicesPanel.classList.contains('tab-panel-open')) {
-        servicesPanel.classList.remove('tab-panel-open');
+    for (var i = 0, max = servicesPanels.length; i < max; i++) {
+      if (servicesPanels[i].classList.contains('tab-panel-open')) {
+        servicesPanels[i].classList.remove('tab-panel-open');
       }
-    });
+    }
   };
 
   var activateTab = function (tab) {
